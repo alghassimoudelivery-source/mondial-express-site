@@ -81,9 +81,11 @@ services:
       - src:/src
     entrypoint: ["/bin/sh", "/src/repo/setup.sh"]
 
-  # Proxy HTTPS (certificat Let's Encrypt automatique) pour le domaine.
+  # Proxy HTTPS optionnel (profil « https ») : seulement si les ports 80/443 de l'hôte sont libres.
+  # Sur le VPS actuel ils sont pris par le serveur web de l'hôte : on passe par lui (voir README).
   caddy:
     image: caddy:2.8-alpine
+    profiles: ["https"]
     restart: unless-stopped
     depends_on:
       - wordpress
