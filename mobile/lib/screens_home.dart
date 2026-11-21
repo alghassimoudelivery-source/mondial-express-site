@@ -270,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SectionHead(t('Nos compagnies partenaires'), action: t('L’agence'), onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AgenceScreen()))),
             FutureBuilder<Map<String, dynamic>>(
               future: pres,
-              builder: (context, snap) => snap.hasData ? PartnersStrip((snap.data!['partenaires'] as List? ?? []).cast<Map<String, dynamic>>()) : const SizedBox(height: 62),
+              builder: (context, snap) => snap.hasData ? PartnersStrip((snap.data!['partenaires'] as List? ?? []).cast<Map<String, dynamic>>()) : const SizedBox(height: 96),
             ),
             const Gap(12),
             _Banner(icon: Icons.groups_outlined, title: t('Découvrir l’agence'), text: t('Notre histoire, nos valeurs et notre équipe'), color: MeColors.orange, onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AgenceScreen()))),

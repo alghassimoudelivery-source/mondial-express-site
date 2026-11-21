@@ -1314,3 +1314,6 @@ msgstr "حجزًا شهريًا"
 
 msgid "Écouter"
 msgstr "الإصغاء"
+
+msgid "Logo %s"
+msgstr "شعار %s"

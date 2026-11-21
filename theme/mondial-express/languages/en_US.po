@@ -1361,3 +1361,6 @@ msgstr "bookings per month"
 
 msgid "Écouter"
 msgstr "Listen"
+
+msgid "Logo %s"
+msgstr "%s logo"

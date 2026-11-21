@@ -18,7 +18,7 @@ class PartnersStrip extends StatelessWidget {
   final List<Map<String, dynamic>> list;
   @override
   Widget build(BuildContext context) => SizedBox(
-        height: 62,
+        height: 96,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: list.length,
@@ -28,6 +28,7 @@ class PartnersStrip extends StatelessWidget {
       );
 }
 
+/// Carte d'une compagnie : son logo et son nom (badge du code IATA si le logo manque).
 class PartnerChip extends StatelessWidget {
   const PartnerChip(this.a, this.i, {super.key});
   final Map<String, dynamic> a;
@@ -35,19 +36,29 @@ class PartnerChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = [MeColors.violet, MeColors.orangeInk, MeColors.vertInk][i % 3];
+    final logo = a['logo'] as String? ?? '';
+    final badge = Container(
+      width: 44,
+      height: 44,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(color: c.withValues(alpha: .1), borderRadius: BorderRadius.circular(12)),
+      child: Text(a['code'] as String? ?? '', style: TextStyle(color: c, fontWeight: FontWeight.w800, fontSize: 13)),
+    );
     return Container(
-      padding: const EdgeInsets.fromLTRB(8, 8, 14, 8),
+      width: 136,
+      height: 96,
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 8),
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: MeColors.line)),
-      child: Row(mainAxisSize: MainAxisSize.min, children: [
-        Container(
-          width: 40,
-          height: 40,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(color: c.withValues(alpha: .1), borderRadius: BorderRadius.circular(12)),
-          child: Text(a['code'] as String? ?? '', style: TextStyle(color: c, fontWeight: FontWeight.w800, fontSize: 13)),
+      child: Column(children: [
+        Expanded(
+          child: Center(
+            child: logo.isEmpty
+                ? badge
+                : Image.network(logo, fit: BoxFit.contain, semanticLabel: a['nom'] as String?, errorBuilder: (_, _, _) => badge),
+          ),
         ),
-        const SizedBox(width: 10),
-        Text(a['nom'] as String? ?? '', style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5)),
+        const SizedBox(height: 6),
+        Text(a['nom'] as String? ?? '', maxLines: 1, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 11.5, color: MeColors.muted)),
       ]),
     );
   }
@@ -169,7 +180,7 @@ class _AgenceScreenState extends State<AgenceScreen> {
               SectionHead(t('Nos compagnies partenaires')),
               Text(t('Nous émettons vos billets sur les principales compagnies qui desservent Conakry et le monde.'), style: const TextStyle(color: MeColors.muted)),
               const Gap(12),
-              Wrap(spacing: 8, runSpacing: 8, children: [for (var i = 0; i < l('partenaires').length; i++) PartnerChip(l('partenaires')[i], i)]),
+              GridView.count(crossAxisCount: 2, shrinkWrap: true, physics: const NeverScrollableScrollPhysics(), mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 1.55, children: [for (var i = 0; i < l('partenaires').length; i++) PartnerChip(l('partenaires')[i], i)]),
               SectionHead(t('Notre histoire')),
               for (var i = 0; i < l('histoire').length; i++) _HistoryItem(l('histoire')[i], last: i == l('histoire').length - 1),
               SectionHead(t('Nos clients témoignent')),

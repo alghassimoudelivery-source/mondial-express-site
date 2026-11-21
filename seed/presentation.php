@@ -62,3 +62,30 @@ if ( $about && ! empty( $locs['principal'] ) ) {
 		WP_CLI::log( 'Menu : « L’agence » ajoutée.' );
 	}
 }
+
+// Logos des compagnies partenaires (ancien site), importés une seule fois chacun.
+$abase = 'https://mondialexpressgn.com/assets/images/airlines/';
+$logos = (array) get_option( 'me_partenaires_logos', array() );
+$pres  = function_exists( 'me_presentation' ) ? me_presentation() : array( 'partenaires' => array() );
+foreach ( $pres['partenaires'] as $a ) {
+	list( $nom, $code, $file ) = array_pad( $a, 3, '' );
+	if ( ! $file || ! empty( $logos[ $code ] ) ) {
+		continue;
+	}
+	$tmp = download_url( $abase . $file, 30 );
+	if ( is_wp_error( $tmp ) ) {
+		WP_CLI::warning( "Logo $code non téléchargé : " . $tmp->get_error_message() );
+		continue;
+	}
+	$id = media_handle_sideload( array( 'name' => 'compagnie-' . strtolower( $code ) . '-' . $file, 'tmp_name' => $tmp ), 0, 'Logo ' . $nom );
+	if ( is_wp_error( $id ) ) {
+		@unlink( $tmp ); // phpcs:ignore
+		WP_CLI::warning( "Logo $code non importé : " . $id->get_error_message() );
+		continue;
+	}
+	update_post_meta( $id, '_wp_attachment_image_alt', 'Logo ' . $nom );
+	$img = wp_get_attachment_image_src( $id, 'medium' );
+	$logos[ $code ] = $img ? $img[0] : wp_get_attachment_url( $id );
+	update_option( 'me_partenaires_logos', $logos, false );
+}
+WP_CLI::log( 'Logos des compagnies : ' . count( $logos ) . ' / ' . count( $pres['partenaires'] ) );

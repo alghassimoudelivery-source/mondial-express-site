@@ -17,6 +17,14 @@ function me_team_photo( $key ) {
 }
 
 /**
+ * Logos des compagnies partenaires : adresses des images importées (option me_partenaires_logos, clé = code IATA).
+ */
+function me_partner_logo( $code ) {
+	$logos = (array) get_option( 'me_partenaires_logos', array() );
+	return isset( $logos[ $code ] ) ? $logos[ $code ] : '';
+}
+
+/**
  * Contenu de la présentation (traduisible).
  */
 function me_presentation() {
@@ -65,22 +73,22 @@ function me_presentation() {
 			array( 'deen', 'Manfred Deen', __( 'Community manager', 'mondial-express' ) ),
 		),
 		'partenaires' => array(
-			array( 'Brussels Airlines', 'SN' ),
-			array( 'Ethiopian Airlines', 'ET' ),
-			array( 'Air France', 'AF' ),
-			array( 'Air Sénégal', 'HC' ),
-			array( 'Royal Air Maroc', 'AT' ),
-			array( 'ASKY Airlines', 'KP' ),
-			array( 'Air Côte d’Ivoire', 'HF' ),
-			array( 'Qatar Airways', 'QR' ),
-			array( 'American Airlines', 'AA' ),
-			array( 'British Airways', 'BA' ),
-			array( 'Air China', 'CA' ),
-			array( 'Emirates', 'EK' ),
-			array( 'Air India', 'AI' ),
-			array( 'Mauritania Airlines', 'L6' ),
-			array( 'Singapore Airlines', 'SQ' ),
-			array( 'Turkish Airlines', 'TK' ),
+			array( 'Brussels Airlines', 'SN', 'brussels.png' ),
+			array( 'Ethiopian Airlines', 'ET', 'ethiopian.png' ),
+			array( 'Air France', 'AF', 'france.webp' ),
+			array( 'Air Sénégal', 'HC', 'senegal.png' ),
+			array( 'Royal Air Maroc', 'AT', 'maroc.webp' ),
+			array( 'ASKY Airlines', 'KP', 'asky.png' ),
+			array( 'Air Côte d’Ivoire', 'HF', 'ivory-coast.png' ),
+			array( 'Qatar Airways', 'QR', 'qatar.png' ),
+			array( 'American Airlines', 'AA', 'american.png' ),
+			array( 'British Airways', 'BA', 'british.png' ),
+			array( 'Air China', 'CA', 'china.png' ),
+			array( 'Emirates', 'EK', 'emirates.png' ),
+			array( 'Air India', 'AI', 'india.png' ),
+			array( 'Mauritania Airlines', 'L6', 'mauritanienne.png' ),
+			array( 'Singapore Airlines', 'SQ', 'singapore.png' ),
+			array( 'Turkish Airlines', 'TK', 'turkish.png' ),
 		),
 		'temoignages' => array(
 			array( 'Aïssata Bangoura', __( 'Responsable commerciale, IBM', 'mondial-express' ), __( 'Pour tous les déplacements de nos équipes, Mondial Express trouve la bonne option au bon prix. Les billets arrivent toujours à temps, même quand nous nous y prenons tard.', 'mondial-express' ) ),
@@ -103,7 +111,7 @@ function me_presentation_api() {
 		'chiffres'    => array_map( fn( $c ) => array( 'valeur' => $c[0], 'libelle' => $c[1] ), $p['chiffres'] ),
 		'histoire'    => array_map( fn( $h ) => array( 'annee' => $h[0], 'texte' => $h[1] ), $p['histoire'] ),
 		'equipe'      => array_map( fn( $m ) => array( 'nom' => $m[1], 'role' => $m[2], 'photo' => me_team_photo( $m[0] ) ), $p['equipe'] ),
-		'partenaires' => array_map( fn( $a ) => array( 'nom' => $a[0], 'code' => $a[1] ), $p['partenaires'] ),
+		'partenaires' => array_map( fn( $a ) => array( 'nom' => $a[0], 'code' => $a[1], 'logo' => me_partner_logo( $a[1] ) ), $p['partenaires'] ),
 		'temoignages' => array_map( fn( $t ) => array( 'nom' => $t[0], 'role' => $t[1], 'texte' => $t[2] ), $p['temoignages'] ),
 	);
 }
@@ -127,7 +135,12 @@ function me_partners_strip() {
 	$p = me_presentation();
 	echo '<div class="partners" role="list">';
 	foreach ( $p['partenaires'] as $a ) {
-		echo '<span class="partner" role="listitem"><b>' . esc_html( $a[1] ) . '</b>' . esc_html( $a[0] ) . '</span>';
+		$logo = me_partner_logo( $a[1] );
+		if ( $logo ) {
+			echo '<span class="partner has-logo" role="listitem"><span class="partner-logo"><img src="' . esc_url( $logo ) . '" alt="' . esc_attr( sprintf( /* translators: %s: compagnie aérienne */ __( 'Logo %s', 'mondial-express' ), $a[0] ) ) . '" loading="lazy" decoding="async"></span><span class="partner-name">' . esc_html( $a[0] ) . '</span></span>';
+		} else {
+			echo '<span class="partner" role="listitem"><b>' . esc_html( $a[1] ) . '</b>' . esc_html( $a[0] ) . '</span>';
+		}
 	}
 	echo '</div>';
 }

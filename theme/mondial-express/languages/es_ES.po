@@ -1376,3 +1376,6 @@ msgstr "reservas al mes"
 
 msgid "Écouter"
 msgstr "Escuchar"
+
+msgid "Logo %s"
+msgstr "Logotipo de %s"
