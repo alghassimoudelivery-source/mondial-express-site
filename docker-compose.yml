@@ -1,0 +1,85 @@
+# Mondial Express Guinée — WordPress dans Docker (ConforDev).
+# Variables attendues dans l'environnement du projet (jamais dans ce dépôt) :
+#   ME_REPO, ME_URL, ME_PORT, DB_PASSWORD, DB_ROOT_PASSWORD, WP_ADMIN_USER, WP_ADMIN_PASSWORD, WP_ADMIN_EMAIL
+services:
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: mondial
+      MARIADB_USER: mondial
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  fetch:
+    image: alpine:3.20
+    restart: "no"
+    volumes:
+      - src:/src
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        apk add --no-cache git >/dev/null
+        if [ -d /src/repo/.git ]; then git -C /src/repo fetch --depth 1 origin main && git -C /src/repo reset --hard origin/main;
+        else git clone --depth 1 "$${ME_REPO}" /src/repo; fi
+        chown -R 33:33 /src/repo
+        echo FETCH_OK
+    environment:
+      ME_REPO: ${ME_REPO}
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      fetch:
+        condition: service_completed_successfully
+    ports:
+      - "${ME_PORT:-8085}:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: mondial
+      WORDPRESS_DB_USER: mondial
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_CONFIG_EXTRA: |
+        define( 'WP_HOME', getenv( 'ME_URL' ) );
+        define( 'WP_SITEURL', getenv( 'ME_URL' ) );
+        define( 'DISALLOW_FILE_EDIT', true );
+      ME_URL: ${ME_URL}
+    volumes:
+      - wp:/var/www/html
+
+  setup:
+    image: wordpress:cli-php8.3
+    restart: "no"
+    user: "33:33"
+    depends_on:
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: mondial
+      WORDPRESS_DB_USER: mondial
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      ME_URL: ${ME_URL}
+      WP_ADMIN_USER: ${WP_ADMIN_USER}
+      WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD}
+      WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+    volumes:
+      - wp:/var/www/html
+      - src:/src
+    entrypoint: ["/bin/sh", "/src/repo/setup.sh"]
+
+volumes:
+  db:
+  wp:
+  src:

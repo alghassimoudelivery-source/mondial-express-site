@@ -1,0 +1,1120 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mondial Express 1.0.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Voyages religieux"
+msgstr "Religious travel"
+
+msgid "Pré-inscription"
+msgstr "Pre-registration"
+
+msgid "Résultats pour « %s »"
+msgstr "Results for “%s”"
+
+msgid "Aucun résultat. Essayez un autre mot ou contactez-nous sur WhatsApp."
+msgstr "No results. Try another word or contact us on WhatsApp."
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid ""
+"Conseils de voyage, actualités des visas et bons plans au départ de Conakry."
+msgstr "Travel tips, visa news and deals departing from Conakry."
+
+msgid "Catégories"
+msgstr "Categories"
+
+msgid "Aucun article pour le moment."
+msgstr "No articles yet."
+
+msgid "Aucun contenu."
+msgstr "No content."
+
+msgid "Billet d'avion"
+msgstr "Flight ticket"
+
+msgid "Visa"
+msgstr "Visa"
+
+msgid "Hôtel"
+msgstr "Hotel"
+
+msgid "Hajj & Oumra"
+msgstr "Hajj & Umrah"
+
+msgid "Agence de voyage à Conakry"
+msgstr "Travel agency in Conakry"
+
+msgid ""
+"Un <em>voyage réussi</em> commence par une agence qui <strong>comprend ses "
+"voyageurs.</strong>"
+msgstr ""
+"A <em>successful trip</em> starts with an agency that <strong>understands "
+"its travellers.</strong>"
+
+msgid ""
+"Billets d'avion, visas, hôtels, Hajj et Oumra : nous adaptons chaque service"
+" à vos besoins, de la demande jusqu'à l'embarquement."
+msgstr ""
+"Flights, visas, hotels, Hajj and Umrah: we tailor every service to your "
+"needs, from your request to boarding."
+
+msgid "Réserver un billet"
+msgstr "Book a ticket"
+
+msgid "Écrire sur WhatsApp"
+msgstr "Message us on WhatsApp"
+
+msgid ""
+"Voyageuse souriante avec sa valise, prête à embarquer avec Mondial Express"
+msgstr ""
+"Smiling traveller with her suitcase, ready to board with Mondial Express"
+
+msgid "Visa obtenu"
+msgstr "Visa granted"
+
+msgid "Dossier ME-2611-2418"
+msgstr "File ME-2611-2418"
+
+msgid "Billet émis"
+msgstr "Ticket issued"
+
+msgid "Type de demande"
+msgstr "Request type"
+
+msgid "Nos services"
+msgstr "Our services"
+
+msgid "Un seul interlocuteur pour tout votre voyage."
+msgstr "One point of contact for your whole trip."
+
+msgid "Tous les services"
+msgstr "All services"
+
+msgid "Offres du moment"
+msgstr "Current deals"
+
+msgid "Départs depuis Conakry."
+msgstr "Departures from Conakry."
+
+msgid "Toutes les offres"
+msgstr "All deals"
+
+msgid "Pourquoi Mondial Express"
+msgstr "Why Mondial Express"
+
+msgid "Une agence qui vous accompagne, du premier message au retour"
+msgstr "An agency that supports you, from the first message to your return"
+
+msgid ""
+"Nos conseillers à Conakry connaissent les exigences des compagnies et des "
+"ambassades. Ils vous évitent les mauvaises surprises et vous font gagner du "
+"temps."
+msgstr ""
+"Our advisers in Conakry know airline and embassy requirements. They spare "
+"you bad surprises and save you time."
+
+msgid "Découvrir l'agence"
+msgstr "Discover the agency"
+
+msgid "Meilleurs tarifs"
+msgstr "Best fares"
+
+msgid "Nous comparons les compagnies pour vous."
+msgstr "We compare airlines for you."
+
+msgid "Dossiers visa soignés"
+msgstr "Carefully prepared visa files"
+
+msgid "Liste des pièces, vérification et prise de rendez-vous."
+msgstr "Document list, checks and appointment booking."
+
+msgid "Suivi en temps réel"
+msgstr "Real-time tracking"
+
+msgid "Votre dossier sur le site, dans l’app et par WhatsApp."
+msgstr "Your file on the website, in the app and on WhatsApp."
+
+msgid "Paiement simple"
+msgstr "Easy payment"
+
+msgid "Orange Money, MTN MoMo, espèces ou carte."
+msgstr "Orange Money, MTN MoMo, cash or card."
+
+msgid "Hajj & Oumra 2027"
+msgstr "Hajj & Umrah 2027"
+
+msgid ""
+"Vols, visa, hébergement près du Haram, transferts et accompagnement par nos "
+"guides."
+msgstr ""
+"Flights, visa, accommodation near the Haram, transfers and support from our "
+"guides."
+
+msgid "Voir les forfaits"
+msgstr "See the packages"
+
+msgid "Ils ont voyagé avec nous"
+msgstr "They travelled with us"
+
+msgid "Témoignages d’exemple, à remplacer par les avis réels des clients."
+msgstr "Sample testimonials, to be replaced with real customer reviews."
+
+msgid "exemple"
+msgstr "sample"
+
+msgid "Conseils & actualités #MondialTrip"
+msgstr "Tips & news #MondialTrip"
+
+msgid ""
+"Visas, bagages, destinations : nos conseils pour bien préparer votre voyage."
+msgstr "Visas, luggage, destinations: our tips to prepare your trip well."
+
+msgid "Tous les articles"
+msgstr "All articles"
+
+msgid "min de lecture"
+msgstr "min read"
+
+msgid "Un projet de voyage ?"
+msgstr "Planning a trip?"
+
+msgid "Nos conseillers s’occupent de votre billet et de votre visa."
+msgstr "Our advisers take care of your ticket and your visa."
+
+msgid "Demander un devis"
+msgstr "Request a quote"
+
+msgid "À lire aussi"
+msgstr "Read also"
+
+msgid "Aller-retour"
+msgstr "Round trip"
+
+msgid "depuis Conakry dès"
+msgstr "from Conakry, from"
+
+msgid "Demander ce billet"
+msgstr "Request this ticket"
+
+msgid "Autres destinations"
+msgstr "Other destinations"
+
+msgid ""
+"Votre partenaire de confiance pour découvrir le monde depuis Conakry. Chaque"
+" voyage est une histoire !"
+msgstr ""
+"Your trusted partner to discover the world from Conakry. Every trip is a "
+"story!"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Agence"
+msgstr "Agency"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Téléchargez l'application"
+msgstr "Download the app"
+
+msgid "Paiements acceptés"
+msgstr "Accepted payments"
+
+msgid "Mentions légales"
+msgstr "Legal notice"
+
+msgid "Confidentialité"
+msgstr "Privacy"
+
+msgid "Discuter sur WhatsApp"
+msgstr "Chat on WhatsApp"
+
+msgid "Bonjour %s"
+msgstr "Hello %s"
+
+msgid "Vos demandes, vos dossiers et vos documents au même endroit."
+msgstr "Your requests, files and documents in one place."
+
+msgid ""
+"Créez votre compte pour suivre vos dossiers et envoyer vos documents en "
+"toute sécurité."
+msgstr ""
+"Create your account to track your files and send your documents securely."
+
+msgid "Se connecter"
+msgstr "Log in"
+
+msgid "E-mail ou identifiant"
+msgstr "Email or username"
+
+msgid "Mot de passe"
+msgstr "Password"
+
+msgid "Rester connecté"
+msgstr "Stay logged in"
+
+msgid "Mot de passe oublié ?"
+msgstr "Forgot your password?"
+
+msgid "Créer mon compte"
+msgstr "Create my account"
+
+msgid "Nom complet"
+msgstr "Full name"
+
+msgid "Téléphone / WhatsApp"
+msgstr "Phone / WhatsApp"
+
+msgid "E-mail"
+msgstr "Email"
+
+msgid "Mot de passe (8 caractères minimum)"
+msgstr "Password (at least 8 characters)"
+
+msgid "Mes dossiers"
+msgstr "My files"
+
+msgid ""
+"Aucun dossier pour l'instant. Dès qu'un conseiller ouvre votre dossier, il "
+"apparaît ici."
+msgstr "No file yet. As soon as an adviser opens your file, it appears here."
+
+msgid "Faire une demande"
+msgstr "Make a request"
+
+msgid "Envoyer un document"
+msgstr "Send a document"
+
+msgid "PDF, JPG ou PNG, 8 Mo max."
+msgstr "PDF, JPG or PNG, 8 MB max."
+
+msgid "Nom du document (ex. Passeport)"
+msgstr "Document name (e.g. Passport)"
+
+msgid "Nom du document"
+msgstr "Document name"
+
+msgid "Envoyer"
+msgstr "Send"
+
+msgid "Mes demandes"
+msgstr "My requests"
+
+msgid "Aucune demande envoyée avec ce compte."
+msgstr "No request sent with this account."
+
+msgid "Nouvelle demande"
+msgstr "New request"
+
+msgid "Se déconnecter"
+msgstr "Log out"
+
+msgid "Ce vol n’existe pas…"
+msgstr "This flight doesn’t exist…"
+
+msgid ""
+"La page demandée est introuvable. Revenez à l’accueil ou dites-nous ce que "
+"vous cherchez."
+msgstr ""
+"The page you requested can’t be found. Go back to the home page or tell us "
+"what you are looking for."
+
+msgid "Retour à l'accueil"
+msgstr "Back to home"
+
+msgid "Une question, un devis, une urgence ? Nos conseillers vous répondent."
+msgstr "A question, a quote, an emergency? Our advisers will answer you."
+
+msgid "Téléphone"
+msgstr "Phone"
+
+msgid "À compléter"
+msgstr "To be completed"
+
+msgid "Conakry, Guinée (adresse à compléter)"
+msgstr "Conakry, Guinea (address to be completed)"
+
+msgid "Itinéraire"
+msgstr "Directions"
+
+msgid "Horaires"
+msgstr "Opening hours"
+
+msgid "Moyens de paiement acceptés"
+msgstr "Accepted payment methods"
+
+msgid "Suivez-nous"
+msgstr "Follow us"
+
+msgid "Écrivez-nous"
+msgstr "Write to us"
+
+msgid "Prix par personne"
+msgstr "Price per person"
+
+msgid "Inclus"
+msgstr "Included"
+
+msgid "Non inclus"
+msgstr "Not included"
+
+msgid "S'inscrire"
+msgstr "Sign up"
+
+msgid "Destinations & offres"
+msgstr "Destinations & deals"
+
+msgid ""
+"Billets d'avion au départ de Conakry. Les prix sont donnés à titre indicatif"
+" et varient selon les dates : demandez votre devis."
+msgstr ""
+"Flight tickets departing from Conakry. Prices are indicative and vary by "
+"date: ask for your quote."
+
+msgid "Aucune offre pour le moment."
+msgstr "No deals at the moment."
+
+msgid "Réponse rapide par WhatsApp ou téléphone."
+msgstr "Quick reply by WhatsApp or phone."
+
+msgid "Nos autres services"
+msgstr "Our other services"
+
+msgid ""
+"Demandes, documents, suivi de dossier et offres exclusives : l'agence "
+"Mondial Express dans votre téléphone."
+msgstr ""
+"Requests, documents, file tracking and exclusive deals: the Mondial Express "
+"agency on your phone."
+
+msgid "Android et iPhone"
+msgstr "Android and iPhone"
+
+msgid "Disponible dès maintenant"
+msgstr "Available now"
+
+msgid "Essayez l'application"
+msgstr "Try the app"
+
+msgid ""
+"Elle fonctionne directement depuis votre téléphone, sans téléchargement "
+"lourd. Installez-la sur votre écran d'accueil en un geste."
+msgstr ""
+"It runs right from your phone, with no heavy download. Add it to your home "
+"screen in one tap."
+
+msgid "Accueil et recherche"
+msgstr "Home and search"
+
+msgid "Suivi du dossier"
+msgstr "File tracking"
+
+msgid "Espace client"
+msgstr "Customer area"
+
+msgid "Application Mondial Express : %s"
+msgstr "Mondial Express app: %s"
+
+msgid "Ouvrir l'application"
+msgstr "Open the app"
+
+msgid "Android"
+msgstr "Android"
+
+msgid "ouvrez l'application puis touchez « Installer »."
+msgstr "open the app, then tap “Install”."
+
+msgid "iPhone"
+msgstr "iPhone"
+
+msgid "dans Safari, touchez Partager puis « Sur l'écran d'accueil »."
+msgstr "in Safari, tap Share then “Add to Home Screen”."
+
+msgid "Demande de billet en 30 secondes"
+msgstr "Ticket request in 30 seconds"
+
+msgid ""
+"Départ, destination, dates : votre conseiller vous répond avec les "
+"meilleures options."
+msgstr ""
+"Departure, destination, dates: your adviser replies with the best options."
+
+msgid "Documents envoyés en photo"
+msgstr "Documents sent as photos"
+
+msgid ""
+"Passeport, photos, relevés : prenez-les en photo, ils arrivent directement "
+"dans votre dossier."
+msgstr ""
+"Passport, photos, statements: take a picture, they go straight to your file."
+
+msgid "Notifications à chaque étape"
+msgstr "Notifications at every step"
+
+msgid ""
+"Documents validés, rendez-vous, visa obtenu, billet émis : vous êtes "
+"prévenu."
+msgstr ""
+"Documents approved, appointment, visa granted, ticket issued: you are "
+"notified."
+
+msgid "Pensée pour les petits réseaux"
+msgstr "Built for weak networks"
+
+msgid ""
+"Légère et rapide : offres et dossiers restent consultables même quand la "
+"connexion faiblit."
+msgstr ""
+"Light and fast: deals and files stay available even when the connection "
+"drops."
+
+msgid "Paiement mobile"
+msgstr "Mobile payment"
+
+msgid ""
+"Orange Money, MTN MoMo ou carte, dès que le paiement en ligne est activé."
+msgstr "Orange Money, MTN MoMo or card, once online payment is enabled."
+
+msgid "Votre conseiller en un geste"
+msgstr "Your adviser in one tap"
+
+msgid "Appel ou WhatsApp directement depuis votre dossier."
+msgstr "Call or WhatsApp right from your file."
+
+msgid ""
+"Entrez votre numéro de dossier et les 4 derniers chiffres de votre téléphone"
+" pour voir où en est votre demande."
+msgstr ""
+"Enter your file number and the last 4 digits of your phone to see where your"
+" request stands."
+
+msgid "Numéro de dossier"
+msgstr "File number"
+
+msgid "4 derniers chiffres du téléphone"
+msgstr "Last 4 digits of your phone"
+
+msgid "Voir mon dossier"
+msgstr "View my file"
+
+msgid ""
+"Aucun dossier ne correspond. Vérifiez le numéro (il figure sur votre reçu) "
+"et les 4 derniers chiffres de votre téléphone."
+msgstr ""
+"No matching file. Check the number (it is on your receipt) and the last 4 "
+"digits of your phone."
+
+msgid "Recevez une notification à chaque étape avec l’application mobile."
+msgstr "Get a notification at every step with the mobile app."
+
+msgid "Télécharger l'application"
+msgstr "Download the app"
+
+msgid "Menu principal"
+msgstr "Main menu"
+
+msgid "Menu du pied de page"
+msgstr "Footer menu"
+
+msgid "Rechercher"
+msgstr "Search"
+
+msgid "Rechercher un article, une destination…"
+msgstr "Search for an article, a destination…"
+
+msgid ""
+"Les réponses aux questions que nos voyageurs nous posent le plus souvent."
+msgstr "Answers to the questions our travellers ask us most often."
+
+msgid "Vous ne trouvez pas votre réponse ?"
+msgstr "Can’t find your answer?"
+
+msgid "Posez-nous la question"
+msgstr "Ask us"
+
+msgid ""
+"Choisissez votre besoin et laissez-nous vos coordonnées : un conseiller vous"
+" répond rapidement."
+msgstr ""
+"Choose what you need and leave your details: an adviser will get back to you"
+" quickly."
+
+msgid ""
+"Billetterie, visas, hôtels, Hajj et Oumra, évacuation sanitaire et voyages "
+"d'affaires : une seule équipe pour tout votre voyage."
+msgstr ""
+"Ticketing, visas, hotels, Hajj and Umrah, medical evacuation and business "
+"travel: one team for your whole trip."
+
+msgid "Aller au contenu"
+msgstr "Skip to content"
+
+msgid "Conakry, Guinée"
+msgstr "Conakry, Guinea"
+
+msgid "Nouveau : téléchargez l'application Mondial Express"
+msgstr "New: download the Mondial Express app"
+
+msgid "Mon espace client"
+msgstr "My customer area"
+
+msgid "Mon espace"
+msgstr "My account"
+
+msgid "Ouvrir le menu"
+msgstr "Open the menu"
+
+msgid "dès"
+msgstr "from"
+
+msgid "Voir le forfait"
+msgstr "See the package"
+
+msgid "Chaque voyage est une histoire !"
+msgstr "Every trip is a story!"
+
+msgid "Suivez votre dossier en ligne ou dans l'application Mondial Express."
+msgstr "Track your file online or in the Mondial Express app."
+
+msgid "voyageurs accompagnés"
+msgstr "travellers assisted"
+
+msgid "destinations"
+msgstr "destinations"
+
+msgid "de visas obtenus"
+msgstr "visas granted"
+
+msgid "Bonjour Aïssatou"
+msgstr "Hello Aïssatou"
+
+msgid "Où partez-vous ?"
+msgstr "Where are you going?"
+
+msgid "Demande reçue"
+msgstr "Request received"
+
+msgid "Documents validés"
+msgstr "Documents approved"
+
+msgid "Rendez-vous le 25 nov."
+msgstr "Appointment on 25 Nov"
+
+msgid "Application mobile"
+msgstr "Mobile app"
+
+msgid "Votre agence dans votre poche"
+msgstr "Your agency in your pocket"
+
+msgid ""
+"Demandez un billet, envoyez vos documents de visa et suivez votre dossier en"
+" temps réel avec l'application Mondial Express."
+msgstr ""
+"Request a ticket, send your visa documents and track your file in real time "
+"with the Mondial Express app."
+
+msgid "Suivi de dossier"
+msgstr "File tracking"
+
+msgid "Alertes promotions"
+msgstr "Deal alerts"
+
+msgid "Documents en photo"
+msgstr "Documents as photos"
+
+msgid "Découvrir l'application"
+msgstr "Discover the app"
+
+msgid "Client"
+msgstr "Customer"
+
+msgid "Nom, e-mail valide et mot de passe de 8 caractères minimum."
+msgstr "Name, valid email and a password of at least 8 characters."
+
+msgid "Un compte existe déjà avec cet e-mail."
+msgstr "An account already exists with this email."
+
+msgid "Nouveau document client"
+msgstr "New customer document"
+
+msgid "Votre compte est créé. Bienvenue !"
+msgstr "Your account has been created. Welcome!"
+
+msgid ""
+"Indiquez votre nom, un e-mail valide et un mot de passe de 8 caractères "
+"minimum."
+msgstr ""
+"Enter your name, a valid email and a password of at least 8 characters."
+
+msgid ""
+"Un compte existe déjà avec cet e-mail. Connectez-vous ou réinitialisez votre"
+" mot de passe."
+msgstr ""
+"An account already exists with this email. Log in or reset your password."
+
+msgid "La page a expiré. Rechargez-la puis réessayez."
+msgstr "The page has expired. Reload it and try again."
+
+msgid "Document bien reçu. Votre conseiller va le vérifier."
+msgstr "Document received. Your adviser will check it."
+
+msgid "Le fichier dépasse 8 Mo. Réduisez sa taille puis réessayez."
+msgstr "The file is larger than 8 MB. Reduce its size and try again."
+
+msgid "Formats acceptés : PDF, JPG ou PNG."
+msgstr "Accepted formats: PDF, JPG or PNG."
+
+msgid "Le document n'a pas pu être envoyé. Réessayez."
+msgstr "The document could not be sent. Try again."
+
+msgid "Offres"
+msgstr "Deals"
+
+msgid "Demandes reçues"
+msgstr "Requests received"
+
+msgid "Demande"
+msgstr "Request"
+
+msgid "Demandes"
+msgstr "Requests"
+
+msgid "Dossier"
+msgstr "File"
+
+msgid "Dossiers"
+msgstr "Files"
+
+msgid "En traitement"
+msgstr "In progress"
+
+msgid "Rendez-vous / dépôt"
+msgstr "Appointment / submission"
+
+msgid "Visa obtenu / billet émis"
+msgstr "Visa granted / ticket issued"
+
+msgid "Assistance visa"
+msgstr "Visa assistance"
+
+msgid "Hôtel & tourisme"
+msgstr "Hotels & tourism"
+
+msgid "Transport & évacuation"
+msgstr "Transport & evacuation"
+
+msgid "Voyage d'affaires"
+msgstr "Business travel"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Statut"
+msgstr "Status"
+
+msgid "Étape actuelle"
+msgstr "Current step"
+
+msgid "Paiement"
+msgstr "Payment"
+
+msgid "Informations"
+msgstr "Information"
+
+msgid "Votre dossier %1$s : %2$s"
+msgstr "Your file %1$s: %2$s"
+
+msgid "Bonjour Mondial Express, je souhaite des informations pour un voyage."
+msgstr "Hello Mondial Express, I would like information about a trip."
+
+msgid "Mondial Express – Accueil"
+msgstr "Mondial Express – Home"
+
+msgid "Mondial Express sur %s"
+msgstr "Mondial Express on %s"
+
+msgid "Partager"
+msgstr "Share"
+
+msgid "Partager sur %s"
+msgstr "Share on %s"
+
+msgid "Copier le lien"
+msgstr "Copy link"
+
+msgid "Disponible sur"
+msgstr "Get it on"
+
+msgid "Télécharger dans"
+msgstr "Download on the"
+
+msgid "Mobile Money"
+msgstr "Mobile Money"
+
+msgid "Carte bancaire"
+msgstr "Bank card"
+
+msgid "Espèces"
+msgstr "Cash"
+
+msgid "À l’agence"
+msgstr "At the agency"
+
+msgid "Entreprises et ONG"
+msgstr "Companies and NGOs"
+
+msgid "Billetterie"
+msgstr "Ticketing"
+
+msgid "Toutes compagnies, meilleurs tarifs"
+msgstr "All airlines, best fares"
+
+msgid "Schengen, Canada, USA, Turquie…"
+msgstr "Schengen, Canada, USA, Turkey…"
+
+msgid "Hôtels & tourisme"
+msgstr "Hotels & tourism"
+
+msgid "Séjours et circuits clés en main"
+msgstr "Turnkey stays and tours"
+
+msgid "Forfaits accompagnés"
+msgstr "Guided packages"
+
+msgid "Évacuation sanitaire urgente"
+msgstr "Urgent medical evacuation"
+
+msgid "Voyages d'affaires"
+msgstr "Business travel"
+
+msgid "prix indicatif"
+msgstr "indicative price"
+
+msgid "Fil d'Ariane"
+msgstr "Breadcrumb"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Page introuvable"
+msgstr "Page not found"
+
+msgid "Recherche"
+msgstr "Search"
+
+msgid "Trop de tentatives. Réessayez dans quelques minutes."
+msgstr "Too many attempts. Try again in a few minutes."
+
+msgid "Pièce jointe (application)"
+msgstr "Attachment (app)"
+
+msgid ""
+"Aucun dossier ne correspond. Vérifiez le numéro et les 4 derniers chiffres "
+"du téléphone."
+msgstr ""
+"No matching file. Check the number and the last 4 digits of the phone."
+
+msgid "Identifiant ou mot de passe incorrect."
+msgstr "Incorrect username or password."
+
+msgid "Document refusé."
+msgstr "Document rejected."
+
+msgid "Fichier trop lourd (8 Mo maximum)."
+msgstr "File too large (8 MB maximum)."
+
+msgid "Format accepté : PDF, JPG ou PNG."
+msgstr "Accepted format: PDF, JPG or PNG."
+
+msgid "Nouveau document client (application)"
+msgstr "New customer document (app)"
+
+msgid "Départ"
+msgstr "Departure"
+
+msgid "Destination"
+msgstr "Destination"
+
+msgid "Aller"
+msgstr "Outbound"
+
+msgid "Retour"
+msgstr "Return"
+
+msgid "Passagers"
+msgstr "Passengers"
+
+msgid "Classe"
+msgstr "Class"
+
+msgid "Pays demandé"
+msgstr "Country"
+
+msgid "Motif"
+msgstr "Purpose"
+
+msgid "Date de voyage souhaitée"
+msgstr "Preferred travel date"
+
+msgid "Ville"
+msgstr "City"
+
+msgid "Arrivée"
+msgstr "Arrival"
+
+msgid "Nombre de nuits"
+msgstr "Number of nights"
+
+msgid "Personnes"
+msgstr "People"
+
+msgid "Nombre de pèlerins"
+msgstr "Number of pilgrims"
+
+msgid "Degré d’urgence"
+msgstr "Level of urgency"
+
+msgid "Destination souhaitée"
+msgstr "Preferred destination"
+
+msgid "Entreprise / ONG"
+msgstr "Company / NGO"
+
+msgid "Voyages par an (environ)"
+msgstr "Trips per year (approx.)"
+
+msgid "E-mail (facultatif)"
+msgstr "Email (optional)"
+
+msgid "Votre message"
+msgstr "Your message"
+
+msgid "Précisions (facultatif)"
+msgstr "Details (optional)"
+
+msgid "Envoyer le message"
+msgstr "Send the message"
+
+msgid "Envoyer ma demande"
+msgstr "Send my request"
+
+msgid ""
+"Réponse rapide par WhatsApp ou par téléphone. Vos informations servent "
+"uniquement à traiter votre demande."
+msgstr ""
+"Quick reply by WhatsApp or phone. Your information is only used to handle "
+"your request."
+
+msgid "Merci d’indiquer votre nom et un numéro de téléphone valide."
+msgstr "Please enter your name and a valid phone number."
+
+msgid "Envoyée depuis l’application mobile"
+msgstr "Sent from the mobile app"
+
+msgid "Nouvelle demande : %s"
+msgstr "New request: %s"
+
+msgid "Bonjour Mondial Express, je viens d’envoyer une demande sur le site."
+msgstr "Hello Mondial Express, I have just sent a request on the website."
+
+msgid "Merci, votre demande est bien envoyée."
+msgstr "Thank you, your request has been sent."
+
+msgid ""
+"Un conseiller vous contacte rapidement. Pour aller plus vite, envoyez-la "
+"aussi sur WhatsApp."
+msgstr ""
+"An adviser will contact you shortly. To go faster, send it on WhatsApp too."
+
+msgid "La page a expiré. Rechargez-la puis renvoyez votre demande."
+msgstr "The page has expired. Reload it and send your request again."
+
+msgid "Solde à régler."
+msgstr "Balance due."
+
+msgid "Payer"
+msgstr "Pay"
+
+msgid ""
+"Offres de billets d'avion au départ de Conakry : Dubaï, Paris, Istanbul, "
+"Casablanca… Demandez votre devis à Mondial Express."
+msgstr ""
+"Flight deals departing from Conakry: Dubai, Paris, Istanbul, Casablanca… "
+"Request your quote from Mondial Express."
+
+msgid "1 adulte"
+msgstr "1 adult"
+
+msgid "2 adultes"
+msgstr "2 adults"
+
+msgid "3 adultes"
+msgstr "3 adults"
+
+msgid "4 adultes"
+msgstr "4 adults"
+
+msgid "Famille avec enfants"
+msgstr "Family with children"
+
+msgid "Groupe"
+msgstr "Group"
+
+msgid "Économique"
+msgstr "Economy"
+
+msgid "Premium"
+msgstr "Premium"
+
+msgid "Affaires"
+msgstr "Business"
+
+msgid "France / Schengen"
+msgstr "France / Schengen"
+
+msgid "Canada"
+msgstr "Canada"
+
+msgid "États-Unis"
+msgstr "United States"
+
+msgid "Royaume-Uni"
+msgstr "United Kingdom"
+
+msgid "Turquie"
+msgstr "Turkey"
+
+msgid "Émirats arabes unis"
+msgstr "United Arab Emirates"
+
+msgid "Maroc"
+msgstr "Morocco"
+
+msgid "Chine"
+msgstr "China"
+
+msgid "Autre"
+msgstr "Other"
+
+msgid "Tourisme / visite familiale"
+msgstr "Tourism / family visit"
+
+msgid "Études"
+msgstr "Studies"
+
+msgid "Soins médicaux"
+msgstr "Medical care"
+
+msgid "Très urgent (24 h)"
+msgstr "Very urgent (24 h)"
+
+msgid "Sous quelques jours"
+msgstr "Within a few days"
+
+msgid "Planifié"
+msgstr "Planned"
+
+msgid "Conakry (CKY)"
+msgstr "Conakry (CKY)"
+
+msgid "Lun – Sam : 8h – 19h"
+msgstr "Mon – Sat: 8 am – 7 pm"
+
+msgid ""
+"Le moyen de paiement est confirmé avec votre conseiller au moment de la "
+"réservation."
+msgstr "The payment method is confirmed with your adviser when you book."
+
+msgid "Virement bancaire"
+msgstr "Bank transfer"
+
+msgid "Destinations"
+msgstr "Destinations"
+
+msgid ""
+"Agence de voyage à Conakry : billets d'avion, assistance visa, hôtels, Hajj "
+"et Oumra, évacuation sanitaire. Chaque voyage est une histoire !"
+msgstr ""
+"Travel agency in Conakry: flight tickets, visa assistance, hotels, Hajj and "
+"Umrah, medical evacuation. Every trip is a story!"
+
+msgid "Comment demander un billet d’avion ?"
+msgstr "How do I request a flight ticket?"
+
+msgid ""
+"Remplissez le formulaire de demande sur le site ou écrivez-nous sur WhatsApp"
+" au +224 613 00 39 70. Un conseiller vous envoie les meilleures options et "
+"le prix."
+msgstr ""
+"Fill in the request form on the website or message us on WhatsApp at +224 "
+"613 00 39 70. An adviser sends you the best options and the price."
+
+msgid "Quels documents faut-il pour une demande de visa ?"
+msgstr "Which documents do I need for a visa application?"
+
+msgid ""
+"En général : passeport valide au moins 6 mois, photos d’identité, "
+"justificatifs de ressources, réservation d’hôtel et de vol, et selon le pays"
+" une attestation d’accueil ou une lettre de l’employeur. Nous vous donnons "
+"la liste exacte pour votre pays."
+msgstr ""
+"Usually: a passport valid for at least 6 months, ID photos, proof of income,"
+" hotel and flight bookings and, depending on the country, an invitation "
+"letter or a letter from your employer. We give you the exact list for your "
+"country."
+
+msgid "Combien de temps prend un visa ?"
+msgstr "How long does a visa take?"
+
+msgid ""
+"Cela dépend du pays et de la saison : de quelques jours pour certaines "
+"destinations à plusieurs semaines pour l’espace Schengen, le Canada ou les "
+"États-Unis. Déposez votre dossier le plus tôt possible."
+msgstr ""
+"It depends on the country and the season: from a few days for some "
+"destinations to several weeks for the Schengen area, Canada or the United "
+"States. Submit your file as early as possible."
+
+msgid "Comment suivre mon dossier ?"
+msgstr "How do I track my file?"
+
+msgid ""
+"Avec votre numéro de dossier et votre téléphone, sur la page Suivi de "
+"dossier, dans votre espace client ou dans l’application mobile Mondial "
+"Express."
+msgstr ""
+"With your file number and your phone, on the File tracking page, in your "
+"customer area or in the Mondial Express mobile app."
+
+msgid "Quels moyens de paiement acceptez-vous ?"
+msgstr "Which payment methods do you accept?"
+
+msgid "Organisez-vous le Hajj et la Oumra ?"
+msgstr "Do you organise Hajj and Umrah?"
+
+msgid ""
+"Oui, nous proposons chaque année des forfaits accompagnés : vols, visa, "
+"hébergement près des lieux saints, transferts et encadrement."
+msgstr ""
+"Yes, every year we offer guided packages: flights, visa, accommodation near "
+"the holy sites, transfers and supervision."
+
+msgid "Choisir la langue"
+msgstr "Choose language"
+
+msgid "Étape"
+msgstr "Step"
+
+msgid "Action non autorisée."
+msgstr "Action not allowed."

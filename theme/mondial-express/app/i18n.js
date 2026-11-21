@@ -1,0 +1,189 @@
+/* Application Mondial Express : langues (français, anglais, espagnol, arabe) — ConforDev. */
+(() => {
+	'use strict';
+	const LANGS = { fr: 'Français', en: 'English', es: 'Español', ar: 'العربية' };
+	let lang = 'fr';
+	try { lang = localStorage.getItem('me_lang') || ''; } catch (e) { lang = ''; }
+	if (!LANGS[lang]) { const n = (navigator.language || 'fr').slice(0, 2).toLowerCase(); lang = LANGS[n] ? n : 'fr'; }
+	// Clé = texte français affiché par l'application ; valeurs = [anglais, espagnol, arabe].
+	const D = {
+		'Bonjour': ['Hello', 'Hola', 'مرحبًا'],
+		'Bonsoir': ['Good evening', 'Buenas tardes', 'مساء الخير'],
+		'Où partez-vous': ['Where are you going', '¿Adónde viaja', 'إلى أين تسافر'],
+		'aujourd’hui': ['today', 'hoy', 'اليوم'],
+		'Billet': ['Ticket', 'Billete', 'تذكرة'],
+		'Visa': ['Visa', 'Visado', 'تأشيرة'],
+		'Hôtel': ['Hotel', 'Hotel', 'فندق'],
+		'Hajj & Oumra': ['Hajj & Umrah', 'Hajj y Umrah', 'الحج والعمرة'],
+		'Hajj': ['Hajj', 'Hajj', 'الحج'],
+		'Oumra': ['Umrah', 'Umrah', 'العمرة'],
+		'De': ['From', 'Desde', 'من'],
+		'Vers': ['To', 'A', 'إلى'],
+		'Date de départ': ['Departure date', 'Fecha de salida', 'تاريخ المغادرة'],
+		'Passagers': ['Passengers', 'Pasajeros', 'المسافرون'],
+		'Demander les meilleurs prix': ['Get the best prices', 'Pedir los mejores precios', 'اطلب أفضل الأسعار'],
+		'Installer l’application': ['Install the app', 'Instalar la aplicación', 'ثبّت التطبيق'],
+		'Installer': ['Install', 'Instalar', 'تثبيت'],
+		'Touchez Partager puis « Sur l’écran d’accueil »': ['Tap Share, then “Add to Home Screen”', 'Toque Compartir y luego «Añadir a pantalla de inicio»', 'اضغط مشاركة ثم «إضافة إلى الشاشة الرئيسية»'],
+		'Accès direct depuis votre écran d’accueil': ['Direct access from your home screen', 'Acceso directo desde su pantalla de inicio', 'وصول مباشر من شاشتك الرئيسية'],
+		'Nos services': ['Our services', 'Nuestros servicios', 'خدماتنا'],
+		'Tout voir': ['See all', 'Ver todo', 'عرض الكل'],
+		'Offres du moment': ['Current deals', 'Ofertas del momento', 'العروض الحالية'],
+		'Toutes': ['All', 'Todas', 'الكل'],
+		'dès': ['from', 'desde', 'ابتداءً من'],
+		'depuis Conakry dès': ['from Conakry, from', 'desde Conakry, desde', 'من كوناكري ابتداءً من'],
+		'prix indicatif': ['indicative price', 'precio orientativo', 'سعر تقريبي'],
+		'Hajj & Oumra 2027': ['Hajj & Umrah 2027', 'Hajj y Umrah 2027', 'الحج والعمرة 2027'],
+		'Forfaits accompagnés au départ de Conakry': ['Guided packages departing from Conakry', 'Paquetes con acompañamiento desde Conakry', 'باقات مع مرافقة انطلاقًا من كوناكري'],
+		'Suivez votre dossier': ['Track your file', 'Siga su expediente', 'تابع ملفك'],
+		'Visa, billet : chaque étape en temps réel': ['Visa, ticket: every step in real time', 'Visado, billete: cada etapa en tiempo real', 'التأشيرة والتذكرة: كل مرحلة لحظة بلحظة'],
+		'voyageurs': ['travellers', 'viajeros', 'مسافر'],
+		'destinations': ['destinations', 'destinos', 'وجهة'],
+		'visas obtenus': ['visas granted', 'visados obtenidos', 'تأشيرات مقبولة'],
+		'Le blog': ['The blog', 'El blog', 'المدونة'],
+		'Blog #MondialTrip': ['Blog #MondialTrip', 'Blog #MondialTrip', 'مدونة #MondialTrip'],
+		'Accueil': ['Home', 'Inicio', 'الرئيسية'],
+		'Offres': ['Deals', 'Ofertas', 'العروض'],
+		'Demande': ['Request', 'Solicitud', 'طلب'],
+		'Suivi': ['Tracking', 'Seguimiento', 'المتابعة'],
+		'Compte': ['Account', 'Cuenta', 'الحساب'],
+		'Notifications': ['Notifications', 'Notificaciones', 'الإشعارات'],
+		'Notification': ['Notification', 'Notificación', 'إشعار'],
+		'Navigation principale': ['Main navigation', 'Navegación principal', 'التنقل الرئيسي'],
+		'Offres & destinations': ['Deals & destinations', 'Ofertas y destinos', 'العروض والوجهات'],
+		'Billets au départ de Conakry. Prix donnés à titre indicatif : demandez votre devis.': ['Tickets departing from Conakry. Prices are indicative: ask for your quote.', 'Billetes desde Conakry. Precios orientativos: pida su presupuesto.', 'تذاكر انطلاقًا من كوناكري. الأسعار تقريبية: اطلب عرض السعر.'],
+		'Demander ce billet': ['Request this ticket', 'Solicitar este billete', 'اطلب هذه التذكرة'],
+		'Réserver sur WhatsApp': ['Book on WhatsApp', 'Reservar por WhatsApp', 'احجز عبر واتساب'],
+		'Partager l’offre': ['Share the deal', 'Compartir la oferta', 'شارك العرض'],
+		'Partager l’article': ['Share the article', 'Compartir el artículo', 'شارك المقال'],
+		'Retour': ['Back', 'Volver', 'رجوع'],
+		'Nouvelle demande': ['New request', 'Nueva solicitud', 'طلب جديد'],
+		'Que souhaitez-vous ?': ['What do you need?', '¿Qué necesita?', 'ماذا تحتاج؟'],
+		'Un conseiller vous répond rapidement, par téléphone ou WhatsApp.': ['An adviser replies quickly, by phone or WhatsApp.', 'Un asesor le responde rápidamente, por teléfono o WhatsApp.', 'يرد عليك مستشار بسرعة عبر الهاتف أو واتساب.'],
+		'Remplissez l’essentiel, nous complétons avec vous.': ['Fill in the essentials, we will complete the rest with you.', 'Rellene lo esencial, lo completamos con usted.', 'املأ الأساسيات وسنكمل الباقي معك.'],
+		'Nom complet *': ['Full name *', 'Nombre completo *', 'الاسم الكامل *'],
+		'Nom complet': ['Full name', 'Nombre completo', 'الاسم الكامل'],
+		'Téléphone / WhatsApp *': ['Phone / WhatsApp *', 'Teléfono / WhatsApp *', 'الهاتف / واتساب *'],
+		'Téléphone / WhatsApp': ['Phone / WhatsApp', 'Teléfono / WhatsApp', 'الهاتف / واتساب'],
+		'E-mail (facultatif)': ['Email (optional)', 'Correo (opcional)', 'البريد الإلكتروني (اختياري)'],
+		'E-mail': ['Email', 'Correo', 'البريد الإلكتروني'],
+		'Ajouter une photo du passeport': ['Add a photo of your passport', 'Añadir una foto del pasaporte', 'أضف صورة جواز السفر'],
+		'Photo ou PDF, 8 Mo maximum (facultatif)': ['Photo or PDF, 8 MB maximum (optional)', 'Foto o PDF, máximo 8 MB (opcional)', 'صورة أو PDF، 8 ميغابايت كحد أقصى (اختياري)'],
+		'Précisions (facultatif)': ['Details (optional)', 'Detalles (opcional)', 'تفاصيل (اختياري)'],
+		'Envoyer ma demande': ['Send my request', 'Enviar mi solicitud', 'إرسال طلبي'],
+		'Vos informations servent uniquement à traiter votre demande.': ['Your information is only used to handle your request.', 'Sus datos solo se usan para tramitar su solicitud.', 'تُستخدم بياناتك فقط لمعالجة طلبك.'],
+		'Forfait': ['Package', 'Paquete', 'الباقة'],
+		'Suivi de dossier': ['File tracking', 'Seguimiento de expediente', 'متابعة الملف'],
+		'Où en est mon dossier ?': ['Where is my file?', '¿Cómo va mi expediente?', 'أين وصل ملفي؟'],
+		'Numéro inscrit sur votre reçu et les 4 derniers chiffres de votre téléphone.': ['The number on your receipt and the last 4 digits of your phone.', 'El número de su recibo y los 4 últimos dígitos de su teléfono.', 'الرقم المدوَّن في إيصالك وآخر 4 أرقام من هاتفك.'],
+		'Numéro de dossier': ['File number', 'Número de expediente', 'رقم الملف'],
+		'4 derniers chiffres du téléphone': ['Last 4 digits of your phone', 'Últimos 4 dígitos del teléfono', 'آخر 4 أرقام من الهاتف'],
+		'Voir mon dossier': ['View my file', 'Ver mi expediente', 'عرض ملفي'],
+		'Pré-inscription 2027': ['2027 pre-registration', 'Preinscripción 2027', 'التسجيل المسبق 2027'],
+		'Places limitées, inscrivez-vous tôt': ['Limited places, sign up early', 'Plazas limitadas, inscríbase pronto', 'الأماكن محدودة، سجّل مبكرًا'],
+		'Je m’inscris': ['Sign me up', 'Me inscribo', 'سجّلني'],
+		'Mon compte': ['My account', 'Mi cuenta', 'حسابي'],
+		'Se connecter': ['Log in', 'Iniciar sesión', 'تسجيل الدخول'],
+		'Créer un compte': ['Create an account', 'Crear una cuenta', 'إنشاء حساب'],
+		'Créer mon compte': ['Create my account', 'Crear mi cuenta', 'إنشاء حسابي'],
+		'E-mail ou identifiant': ['Email or username', 'Correo o usuario', 'البريد الإلكتروني أو اسم المستخدم'],
+		'Mot de passe': ['Password', 'Contraseña', 'كلمة المرور'],
+		'Mot de passe oublié ?': ['Forgot your password?', '¿Olvidó su contraseña?', 'نسيت كلمة المرور؟'],
+		'Se déconnecter': ['Log out', 'Cerrar sesión', 'تسجيل الخروج'],
+		'Mes dossiers': ['My files', 'Mis expedientes', 'ملفاتي'],
+		'Aucun dossier pour le moment.': ['No file yet.', 'Aún no hay expedientes.', 'لا توجد ملفات حاليًا.'],
+		'Vos dossiers apparaissent ici dès que l’agence les ouvre.': ['Your files appear here as soon as the agency opens them.', 'Sus expedientes aparecen aquí en cuanto la agencia los abre.', 'تظهر ملفاتك هنا بمجرد أن تفتحها الوكالة.'],
+		'Faire une demande': ['Make a request', 'Hacer una solicitud', 'تقديم طلب'],
+		'Envoyer un document': ['Send a document', 'Enviar un documento', 'إرسال وثيقة'],
+		'Passeport, photo, relevé… (PDF, JPG, PNG — 8 Mo)': ['Passport, photo, statement… (PDF, JPG, PNG — 8 MB)', 'Pasaporte, foto, extracto… (PDF, JPG, PNG — 8 MB)', 'جواز السفر، صورة، كشف حساب… (PDF، JPG، PNG — 8 ميغابايت)'],
+		'Nom du document': ['Document name', 'Nombre del documento', 'اسم الوثيقة'],
+		'Passeport': ['Passport', 'Pasaporte', 'جواز السفر'],
+		'Choisir ou prendre une photo': ['Choose or take a photo', 'Elegir o hacer una foto', 'اختر صورة أو التقطها'],
+		'Depuis votre téléphone': ['From your phone', 'Desde su teléfono', 'من هاتفك'],
+		'Envoyer': ['Send', 'Enviar', 'إرسال'],
+		'Envoi…': ['Sending…', 'Enviando…', 'جارٍ الإرسال…'],
+		'Choisissez un fichier.': ['Choose a file.', 'Elija un archivo.', 'اختر ملفًا.'],
+		'Document envoyé à l’agence.': ['Document sent to the agency.', 'Documento enviado a la agencia.', 'تم إرسال الوثيقة إلى الوكالة.'],
+		'Vous êtes déconnecté.': ['You are logged out.', 'Ha cerrado sesión.', 'تم تسجيل خروجك.'],
+		'Bienvenue ! Votre compte est créé.': ['Welcome! Your account has been created.', '¡Bienvenido! Su cuenta ha sido creada.', 'مرحبًا! تم إنشاء حسابك.'],
+		'Vous êtes connecté.': ['You are logged in.', 'Ha iniciado sesión.', 'تم تسجيل دخولك.'],
+		'Appeler l’agence': ['Call the agency', 'Llamar a la agencia', 'اتصل بالوكالة'],
+		'Contacter l’agence': ['Contact the agency', 'Contactar con la agencia', 'تواصل مع الوكالة'],
+		'Nous trouver': ['Find us', 'Dónde estamos', 'موقعنا'],
+		'Contact': ['Contact', 'Contacto', 'اتصل بنا'],
+		'Paiements acceptés': ['Accepted payments', 'Pagos aceptados', 'وسائل الدفع المقبولة'],
+		'Suivez-nous': ['Follow us', 'Síganos', 'تابعنا'],
+		'Application réalisée par': ['App by', 'Aplicación realizada por', 'تطبيق من إنجاز'],
+		'Aucune notification.': ['No notifications.', 'No hay notificaciones.', 'لا توجد إشعارات.'],
+		'Suivez un dossier pour être prévenu à chaque étape.': ['Track a file to be notified at every step.', 'Siga un expediente para recibir un aviso en cada etapa.', 'تابع ملفًا ليصلك إشعار في كل مرحلة.'],
+		'Article': ['Article', 'Artículo', 'مقال'],
+		'Dossier': ['File', 'Expediente', 'الملف'],
+		'Solde à régler': ['Balance due', 'Saldo pendiente', 'الرصيد المستحق'],
+		'Payer mon solde': ['Pay my balance', 'Pagar mi saldo', 'ادفع الرصيد'],
+		'Suivre ce dossier dans l’application': ['Track this file in the app', 'Seguir este expediente en la aplicación', 'تابع هذا الملف في التطبيق'],
+		'Dossiers suivis': ['Tracked files', 'Expedientes seguidos', 'الملفات المتابَعة'],
+		'Être prévenu à chaque étape': ['Get notified at every step', 'Recibir un aviso en cada etapa', 'استلم إشعارًا في كل مرحلة'],
+		'Activées': ['On', 'Activadas', 'مفعّلة'],
+		'Activer': ['Turn on', 'Activar', 'تفعيل'],
+		'Notifications activées.': ['Notifications turned on.', 'Notificaciones activadas.', 'تم تفعيل الإشعارات.'],
+		'Notifications non disponibles sur cet appareil.': ['Notifications are not available on this device.', 'Notificaciones no disponibles en este dispositivo.', 'الإشعارات غير متاحة على هذا الجهاز.'],
+		'Notifications refusées dans les réglages.': ['Notifications are blocked in your settings.', 'Notificaciones bloqueadas en los ajustes.', 'الإشعارات مرفوضة في الإعدادات.'],
+		'Lien copié.': ['Link copied.', 'Enlace copiado.', 'تم نسخ الرابط.'],
+		'Connexion impossible. Vérifiez votre réseau.': ['Cannot connect. Check your network.', 'No se puede conectar. Compruebe su red.', 'تعذّر الاتصال. تحقّق من الشبكة.'],
+		'Indiquez votre nom et un numéro de téléphone valide.': ['Enter your name and a valid phone number.', 'Indique su nombre y un número de teléfono válido.', 'أدخل اسمك ورقم هاتف صالح.'],
+		'Offre introuvable.': ['Deal not found.', 'Oferta no encontrada.', 'العرض غير موجود.'],
+		'Article introuvable.': ['Article not found.', 'Artículo no encontrado.', 'المقال غير موجود.'],
+		'Offres indisponibles hors connexion.': ['Deals are unavailable offline.', 'Ofertas no disponibles sin conexión.', 'العروض غير متاحة دون اتصال.'],
+		'Dossier ajouté : vous serez prévenu à chaque étape.': ['File added: you will be notified at every step.', 'Expediente añadido: recibirá un aviso en cada etapa.', 'تمت إضافة الملف: سيصلك إشعار في كل مرحلة.'],
+		'Paiement reçu. Merci !': ['Payment received. Thank you!', 'Pago recibido. ¡Gracias!', 'تم استلام الدفع. شكرًا!'],
+		'Retour à l’accueil': ['Back to home', 'Volver al inicio', 'العودة إلى الرئيسية'],
+		'Demande envoyée !': ['Request sent!', '¡Solicitud enviada!', 'تم إرسال الطلب!'],
+		'Demande envoyée': ['Request sent', 'Solicitud enviada', 'تم إرسال الطلب'],
+		'Envoyer aussi sur WhatsApp': ['Also send on WhatsApp', 'Enviar también por WhatsApp', 'أرسله أيضًا عبر واتساب'],
+		'Merci': ['Thank you', 'Gracias', 'شكرًا'],
+		'Un conseiller Mondial Express vous contacte très vite au': ['A Mondial Express adviser will contact you very soon at', 'Un asesor de Mondial Express le contactará muy pronto al', 'سيتواصل معك مستشار من Mondial Express قريبًا جدًا على الرقم'],
+		'Nouvelle étape :': ['New step:', 'Nueva etapa:', 'مرحلة جديدة:'],
+		'Langue': ['Language', 'Idioma', 'اللغة'],
+		'1 adulte': ['1 adult', '1 adulto', 'بالغ واحد'],
+		'2 adultes': ['2 adults', '2 adultos', 'بالغان'],
+		'3 adultes': ['3 adults', '3 adultos', '3 بالغين'],
+		'Famille avec enfants': ['Family with children', 'Familia con niños', 'عائلة مع أطفال'],
+		'Groupe': ['Group', 'Grupo', 'مجموعة'],
+		'Départ': ['Departure', 'Salida', 'المغادرة'],
+		'Destination': ['Destination', 'Destino', 'الوجهة'],
+		'Bonjour Mondial Express, ': ['Hello Mondial Express, ', 'Hola Mondial Express, ', 'مرحبًا Mondial Express، '],
+		'Bonjour Mondial Express, je suis intéressé(e) par l’offre': ['Hello Mondial Express, I am interested in the deal', 'Hola Mondial Express, me interesa la oferta', 'مرحبًا Mondial Express، أنا مهتم بالعرض'],
+		'Bonjour Mondial Express, je viens d’envoyer une demande depuis l’application (réf.': ['Hello Mondial Express, I have just sent a request from the app (ref.', 'Hola Mondial Express, acabo de enviar una solicitud desde la aplicación (ref.', 'مرحبًا Mondial Express، أرسلت للتو طلبًا من التطبيق (المرجع'],
+		'Bonjour, je souhaite régler le solde du dossier': ['Hello, I would like to pay the balance of file', 'Hola, quisiera pagar el saldo del expediente', 'مرحبًا، أرغب في دفع رصيد الملف'],
+	};
+	const idx = { en: 0, es: 1, ar: 2 }[lang];
+	const t = (s) => (idx === undefined || !D[s] ? s : D[s][idx]);
+	const ATTRS = ['placeholder', 'aria-label', 'title', 'alt'];
+	function apply(root) {
+		if (idx === undefined || !root) return;
+		const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+		let n;
+		while ((n = w.nextNode())) {
+			const v = n.nodeValue; const k = v.trim();
+			if (k && D[k]) n.nodeValue = v.replace(k, D[k][idx]);
+		}
+		if (root.querySelectorAll) {
+			root.querySelectorAll('[placeholder],[aria-label],[title],[alt]').forEach((e) => ATTRS.forEach((a) => { const v = e.getAttribute(a); if (v && D[v.trim()]) e.setAttribute(a, D[v.trim()][idx]); }));
+		}
+	}
+	const dir = lang === 'ar' ? 'rtl' : 'ltr';
+	document.documentElement.lang = lang;
+	document.documentElement.dir = dir;
+	if (idx !== undefined) {
+		const obs = new MutationObserver((list) => {
+			obs.disconnect();
+			list.forEach((m) => { if (m.type === 'characterData') apply(m.target.parentNode); else m.addedNodes.forEach((x) => (x.nodeType === 1 ? apply(x) : x.nodeType === 3 && apply(x.parentNode))); });
+			watch();
+		});
+		const watch = () => obs.observe(document.body, { childList: true, subtree: true, characterData: true });
+		document.addEventListener('DOMContentLoaded', () => { apply(document.body); watch(); });
+	}
+	const locale = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', ar: 'ar' }[lang];
+	function setLang(l) { try { localStorage.setItem('me_lang', l); } catch (e) { /* stockage indisponible */ } location.reload(); }
+	window.MEI18N = { lang, langs: LANGS, t, apply, locale, setLang, dir };
+})();
