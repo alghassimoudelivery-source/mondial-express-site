@@ -110,6 +110,47 @@ function me_api_user() {
 }
 
 /**
+ * Jeton de l'application native (Android / iOS) : en-tête « Authorization: Bearer <jeton> ».
+ * Le jeton est stocké haché dans les métadonnées de l'utilisateur (plusieurs appareils possibles).
+ */
+function me_api_issue_token( $uid ) {
+	$token  = wp_generate_password( 48, false, false );
+	$hashes = (array) get_user_meta( $uid, 'me_app_tokens', true );
+	$hashes = array_slice( array_filter( $hashes ), -9 );
+	$hashes[] = hash( 'sha256', $token );
+	update_user_meta( $uid, 'me_app_tokens', $hashes );
+	return $uid . '.' . $token;
+}
+
+function me_api_token_from_header() {
+	$h = $_SERVER['HTTP_AUTHORIZATION'] ?? ( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? '' ); // phpcs:ignore WordPress.Security
+	if ( ! $h && function_exists( 'getallheaders' ) ) {
+		foreach ( getallheaders() as $k => $v ) {
+			if ( 'authorization' === strtolower( $k ) ) {
+				$h = $v;
+			}
+		}
+	}
+	return preg_match( '/^Bearer\s+(\d+)\.([A-Za-z0-9]{20,})$/', trim( (string) $h ), $m ) ? array( (int) $m[1], $m[2] ) : null;
+}
+
+add_filter(
+	'determine_current_user',
+	function ( $uid ) {
+		if ( $uid || ! defined( 'REST_REQUEST' ) && false === strpos( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), '/wp-json/' ) ) { // phpcs:ignore WordPress.Security
+			return $uid;
+		}
+		$t = me_api_token_from_header();
+		if ( ! $t ) {
+			return $uid;
+		}
+		$hashes = (array) get_user_meta( $t[0], 'me_app_tokens', true );
+		return in_array( hash( 'sha256', $t[1] ), $hashes, true ) ? $t[0] : $uid;
+	},
+	30
+);
+
+/**
  * Pendant la connexion, rend le cookie disponible tout de suite pour créer un jeton REST valide.
  */
 function me_api_capture_cookie( $cookie ) {
@@ -123,6 +164,7 @@ add_action(
 		$open = '__return_true';
 
 		register_rest_route( $ns, '/config', array( 'methods' => 'GET', 'permission_callback' => $open, 'callback' => fn() => me_api_config() ) );
+		register_rest_route( $ns, '/presentation', array( 'methods' => 'GET', 'permission_callback' => $open, 'callback' => fn() => me_presentation_api() ) );
 
 		register_rest_route(
 			$ns,
@@ -298,7 +340,7 @@ add_action(
 						return new WP_Error( 'connexion', __( 'Identifiant ou mot de passe incorrect.', 'mondial-express' ), array( 'status' => 403 ) );
 					}
 					wp_set_current_user( $user->ID );
-					return array( 'utilisateur' => me_api_user(), 'nonce' => wp_create_nonce( 'wp_rest' ) );
+					return array( 'utilisateur' => me_api_user(), 'nonce' => wp_create_nonce( 'wp_rest' ), 'jeton' => me_api_issue_token( $user->ID ) );
 				},
 			)
 		);
@@ -321,7 +363,7 @@ add_action(
 					add_action( 'set_logged_in_cookie', 'me_api_capture_cookie' );
 					wp_set_current_user( $uid );
 					wp_set_auth_cookie( $uid, true, is_ssl() );
-					return array( 'utilisateur' => me_api_user(), 'nonce' => wp_create_nonce( 'wp_rest' ) );
+					return array( 'utilisateur' => me_api_user(), 'nonce' => wp_create_nonce( 'wp_rest' ), 'jeton' => me_api_issue_token( $uid ) );
 				},
 			)
 		);
@@ -337,6 +379,11 @@ add_action(
 				'methods'             => 'POST',
 				'permission_callback' => $logged,
 				'callback'            => function () {
+					$t = me_api_token_from_header();
+					if ( $t ) {
+						$hashes = array_values( array_diff( (array) get_user_meta( $t[0], 'me_app_tokens', true ), array( hash( 'sha256', $t[1] ) ) ) );
+						update_user_meta( $t[0], 'me_app_tokens', $hashes );
+					}
 					wp_logout();
 					return array( 'ok' => true );
 				},

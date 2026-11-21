@@ -782,7 +782,7 @@ msgid "Entreprises et ONG"
 msgstr "Empresas y ONG"
 
 msgid "Billetterie"
-msgstr "Billetes de avión"
+msgstr "Billetes"
 
 msgid "Toutes compagnies, meilleurs tarifs"
 msgstr "Todas las aerolíneas, mejores tarifas"
@@ -1127,3 +1127,252 @@ msgstr "Etapa"
 
 msgid "Action non autorisée."
 msgstr "Acción no permitida."
+
+msgid "L’agence"
+msgstr "La agencia"
+
+msgid "Accompagner"
+msgstr "Acompañar"
+
+msgid "Agence de voyages et de tourisme à Conakry depuis 2015."
+msgstr "Agencia de viajes y turismo en Conakry desde 2015."
+
+msgid "Agent assistant visa"
+msgstr "Asistente de visados"
+
+msgid "Assurer un suivi attentif à chaque étape."
+msgstr "Hacer un seguimiento atento en cada etapa."
+
+msgid "Chef comptable"
+msgstr "Jefe de contabilidad"
+
+msgid "Chef d’agence adjoint"
+msgstr "Jefe de agencia adjunto"
+
+msgid "Cheffe d’agence"
+msgstr "Jefa de agencia"
+
+msgid "Community manager"
+msgstr "Community manager"
+
+msgid "Comprendre chaque projet et ses besoins."
+msgstr "Comprender cada proyecto y sus necesidades."
+
+msgid "Conseiller"
+msgstr "Asesorar"
+
+msgid "Coordonner chaque composante du voyage."
+msgstr "Coordinar cada parte del viaje."
+
+msgid ""
+"Création de Mondial Express en mars 2015 par M. Edouard Koundouno, "
+"entrepreneur à la tête de plusieurs sociétés, dont SOCOGIM dans le bâtiment."
+msgstr ""
+"Mondial Express se funda en marzo de 2015 por el Sr. Edouard Koundouno, "
+"empresario al frente de varias sociedades, entre ellas SOCOGIM en la "
+"construcción."
+
+msgid ""
+"Devenir une référence du voyage et du tourisme en Afrique et dans le monde, "
+"avec des offres personnalisées, des expériences authentiques et des "
+"solutions adaptées aux nouvelles tendances."
+msgstr ""
+"Convertirnos en una referencia del viaje y el turismo en África y en el "
+"mundo, con ofertas personalizadas, experiencias auténticas y soluciones "
+"adaptadas a las nuevas tendencias."
+
+msgid "Directeur général"
+msgstr "Director general"
+
+msgid "Découvrir l’agence"
+msgstr "Conocer la agencia"
+
+msgid "Engagement"
+msgstr "Compromiso"
+
+msgid "Entrepreneur, Conakry"
+msgstr "Empresario, Conakry"
+
+msgid "Esprit d’équipe"
+msgstr "Espíritu de equipo"
+
+msgid "Excellence"
+msgstr "Excelencia"
+
+msgid ""
+"Faciliter le voyage, pour tous : rendre le voyage plus accessible et plus "
+"simple, en associant expertise touristique, solutions flexibles, innovation "
+"et accompagnement personnalisé."
+msgstr ""
+"Facilitar el viaje para todos: hacerlo más accesible y sencillo, combinando "
+"experiencia turística, soluciones flexibles, innovación y acompañamiento "
+"personalizado."
+
+msgid ""
+"Fondée à Conakry en mars 2015, Mondial Express est une agence de voyages et "
+"de tourisme qui accompagne particuliers, entreprises et groupes dans leurs "
+"projets de déplacement, en Guinée comme à l’international. De la billetterie"
+" aérienne à l’assistance visa, en passant par le tourisme éducatif et "
+"médical, les voyages d’affaires, le transport et les séjours personnalisés, "
+"nous proposons des solutions pensées autour des besoins de chaque voyageur."
+msgstr ""
+"Fundada en Conakry en marzo de 2015, Mondial Express es una agencia de "
+"viajes y turismo que acompaña a particulares, empresas y grupos en sus "
+"proyectos de viaje, en Guinea y en el extranjero. De los billetes de avión a"
+" la asistencia de visados, pasando por el turismo educativo y médico, los "
+"viajes de negocios, el transporte y las estancias a medida, ofrecemos "
+"soluciones pensadas para cada viajero."
+
+msgid ""
+"Ils ont géré mon visa et mon billet en une semaine, avec un point d’étape à "
+"chaque avancée du dossier. Je recommande les yeux fermés."
+msgstr ""
+"Gestionaron mi visado y mi billete en una semana, informándome en cada etapa"
+" del expediente. Los recomiendo sin dudarlo."
+
+msgid "Intégrité"
+msgstr "Integridad"
+
+msgid ""
+"La confiance comme fondement : transparence, éthique et respect de nos "
+"engagements."
+msgstr ""
+"La confianza como base: transparencia, ética y respeto de nuestros "
+"compromisos."
+
+msgid ""
+"La qualité dans chaque détail : des prestations fiables et des solutions "
+"adaptées à chaque client."
+msgstr ""
+"La calidad en cada detalle: servicios fiables y soluciones adaptadas a cada "
+"cliente."
+
+msgid ""
+"Lancement du programme de parrainage, qui récompense les clients pour chaque"
+" nouveau voyageur recommandé."
+msgstr ""
+"Lanzamiento del programa de recomendación, que premia a los clientes por "
+"cada nuevo viajero recomendado."
+
+msgid ""
+"L’agence se structure en départements pour mieux gérer chacune de ses "
+"activités."
+msgstr ""
+"La agencia se organiza en departamentos para gestionar mejor cada actividad."
+
+msgid "Nos clients témoignent"
+msgstr "Lo que dicen nuestros clientes"
+
+msgid "Nos compagnies partenaires"
+msgstr "Nuestras aerolíneas asociadas"
+
+msgid "Nos valeurs"
+msgstr "Nuestros valores"
+
+msgid ""
+"Notre approche repose sur une bonne connaissance du secteur, un solide "
+"réseau de partenaires et un accompagnement personnalisé, pour rendre chaque "
+"déplacement plus simple, plus fluide et mieux organisé."
+msgstr ""
+"Nuestro enfoque se basa en un buen conocimiento del sector, una sólida red "
+"de socios y un acompañamiento personalizado, para que cada viaje sea más "
+"sencillo, fluido y organizado."
+
+msgid "Notre histoire"
+msgstr "Nuestra historia"
+
+msgid "Notre mission"
+msgstr "Nuestra misión"
+
+msgid "Notre vision"
+msgstr "Nuestra visión"
+
+msgid "Notre équipe"
+msgstr "Nuestro equipo"
+
+msgid ""
+"Nous émettons vos billets sur les principales compagnies qui desservent "
+"Conakry et le monde."
+msgstr ""
+"Emitimos sus billetes en las principales aerolíneas que vuelan a Conakry y "
+"al resto del mundo."
+
+msgid ""
+"Nouveaux services et création du département Tourisme, pour les circuits en "
+"Guinée et à l’étranger."
+msgstr ""
+"Nuevos servicios y creación del departamento de Turismo, para circuitos en "
+"Guinea y en el extranjero."
+
+msgid ""
+"Nouvelle plateforme en ligne et application mobile : demandes, suivi des "
+"dossiers et actualités en temps réel."
+msgstr ""
+"Nueva plataforma en línea y aplicación móvil: solicitudes, seguimiento de "
+"expedientes y novedades en tiempo real."
+
+msgid "Organiser"
+msgstr "Organizar"
+
+msgid "Orienter vers les solutions les plus adaptées."
+msgstr "Orientar hacia las soluciones más adecuadas."
+
+msgid ""
+"Pour tous les déplacements de nos équipes, Mondial Express trouve la bonne "
+"option au bon prix. Les billets arrivent toujours à temps, même quand nous "
+"nous y prenons tard."
+msgstr ""
+"Para todos los viajes de nuestros equipos, Mondial Express encuentra la "
+"opción adecuada al mejor precio. Los billetes siempre llegan a tiempo, "
+"incluso cuando reservamos tarde."
+
+msgid ""
+"Programme de fidélité : des points à chaque réservation, des réductions et "
+"des avantages exclusifs."
+msgstr ""
+"Programa de fidelidad: puntos en cada reserva, descuentos y ventajas "
+"exclusivas."
+
+msgid ""
+"Présents à chaque étape, avec des solutions personnalisées et un suivi "
+"attentif de chaque projet."
+msgstr ""
+"Presentes en cada etapa, con soluciones personalizadas y un seguimiento "
+"atento de cada proyecto."
+
+msgid "Qui nous sommes"
+msgstr "Quiénes somos"
+
+msgid "Responsable commerciale et marketing"
+msgstr "Responsable comercial y de marketing"
+
+msgid "Responsable commerciale, IBM"
+msgstr "Responsable comercial, IBM"
+
+msgid "Responsable du service nettoyage"
+msgstr "Responsable del servicio de limpieza"
+
+msgid "Responsable stratégie, développement, tourisme et ressources humaines"
+msgstr "Responsable de estrategia, desarrollo, turismo y recursos humanos"
+
+msgid ""
+"Une expertise collective : la complémentarité de notre équipe au service de "
+"votre voyage."
+msgstr ""
+"Una experiencia colectiva: la complementariedad de nuestro equipo al "
+"servicio de su viaje."
+
+msgid "années d’expérience"
+msgstr "años de experiencia"
+
+msgid "compagnies partenaires"
+msgstr "aerolíneas asociadas"
+
+msgid "de clients satisfaits"
+msgstr "de clientes satisfechos"
+
+msgid "réservations par mois"
+msgstr "reservas al mes"
+
+msgid "Écouter"
+msgstr "Escuchar"

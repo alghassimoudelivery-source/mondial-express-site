@@ -20,6 +20,7 @@ require ME_DIR . '/inc/forms.php';
 require ME_DIR . '/inc/espace-client.php';
 require ME_DIR . '/inc/seo.php';
 require ME_DIR . '/inc/admin.php';
+require ME_DIR . '/inc/presentation.php';
 require ME_DIR . '/inc/api.php';
 require ME_DIR . '/inc/app.php';
 

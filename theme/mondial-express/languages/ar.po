@@ -752,7 +752,7 @@ msgid "Entreprises et ONG"
 msgstr "الشركات والمنظمات غير الحكومية"
 
 msgid "Billetterie"
-msgstr "حجز التذاكر"
+msgstr "التذاكر"
 
 msgid "Toutes compagnies, meilleurs tarifs"
 msgstr "جميع شركات الطيران بأفضل الأسعار"
@@ -1089,3 +1089,228 @@ msgstr "المرحلة"
 
 msgid "Action non autorisée."
 msgstr "إجراء غير مسموح به."
+
+msgid "L’agence"
+msgstr "الوكالة"
+
+msgid "Accompagner"
+msgstr "المرافقة"
+
+msgid "Agence de voyages et de tourisme à Conakry depuis 2015."
+msgstr "وكالة سفر وسياحة في كوناكري منذ 2015."
+
+msgid "Agent assistant visa"
+msgstr "مساعد التأشيرات"
+
+msgid "Assurer un suivi attentif à chaque étape."
+msgstr "متابعة دقيقة في كل مرحلة."
+
+msgid "Chef comptable"
+msgstr "رئيس المحاسبة"
+
+msgid "Chef d’agence adjoint"
+msgstr "نائب مدير الوكالة"
+
+msgid "Cheffe d’agence"
+msgstr "مديرة الوكالة"
+
+msgid "Community manager"
+msgstr "مدير المجتمع الرقمي"
+
+msgid "Comprendre chaque projet et ses besoins."
+msgstr "فهم كل مشروع واحتياجاته."
+
+msgid "Conseiller"
+msgstr "تقديم المشورة"
+
+msgid "Coordonner chaque composante du voyage."
+msgstr "تنسيق كل عناصر الرحلة."
+
+msgid ""
+"Création de Mondial Express en mars 2015 par M. Edouard Koundouno, "
+"entrepreneur à la tête de plusieurs sociétés, dont SOCOGIM dans le bâtiment."
+msgstr ""
+"تأسيس Mondial Express في مارس 2015 على يد السيد إدوارد كوندونو، رجل أعمال "
+"يدير عدة شركات منها SOCOGIM في قطاع البناء."
+
+msgid ""
+"Devenir une référence du voyage et du tourisme en Afrique et dans le monde, "
+"avec des offres personnalisées, des expériences authentiques et des "
+"solutions adaptées aux nouvelles tendances."
+msgstr ""
+"أن نصبح مرجعًا في السفر والسياحة في أفريقيا والعالم، بعروض مخصصة وتجارب "
+"أصيلة وحلول تواكب الاتجاهات الجديدة."
+
+msgid "Directeur général"
+msgstr "المدير العام"
+
+msgid "Découvrir l’agence"
+msgstr "تعرّف على الوكالة"
+
+msgid "Engagement"
+msgstr "الالتزام"
+
+msgid "Entrepreneur, Conakry"
+msgstr "رجل أعمال، كوناكري"
+
+msgid "Esprit d’équipe"
+msgstr "روح الفريق"
+
+msgid "Excellence"
+msgstr "التميّز"
+
+msgid ""
+"Faciliter le voyage, pour tous : rendre le voyage plus accessible et plus "
+"simple, en associant expertise touristique, solutions flexibles, innovation "
+"et accompagnement personnalisé."
+msgstr ""
+"تسهيل السفر للجميع: جعل السفر أيسر وأبسط بالجمع بين الخبرة السياحية والحلول "
+"المرنة والابتكار والمرافقة الشخصية."
+
+msgid ""
+"Fondée à Conakry en mars 2015, Mondial Express est une agence de voyages et "
+"de tourisme qui accompagne particuliers, entreprises et groupes dans leurs "
+"projets de déplacement, en Guinée comme à l’international. De la billetterie"
+" aérienne à l’assistance visa, en passant par le tourisme éducatif et "
+"médical, les voyages d’affaires, le transport et les séjours personnalisés, "
+"nous proposons des solutions pensées autour des besoins de chaque voyageur."
+msgstr ""
+"تأسست Mondial Express في كوناكري في مارس 2015، وهي وكالة سفر وسياحة ترافق "
+"الأفراد والشركات والمجموعات في مشاريع سفرهم داخل غينيا وخارجها. من تذاكر "
+"الطيران إلى المساعدة في التأشيرات، مرورًا بالسياحة التعليمية والطبية وسفر "
+"الأعمال والنقل والإقامات المخصصة، نقدم حلولًا مصممة حول احتياجات كل مسافر."
+
+msgid ""
+"Ils ont géré mon visa et mon billet en une semaine, avec un point d’étape à "
+"chaque avancée du dossier. Je recommande les yeux fermés."
+msgstr ""
+"تولّوا تأشيرتي وتذكرتي في أسبوع واحد، مع إطلاعي على كل مرحلة من الملف. أنصح "
+"بهم دون تردد."
+
+msgid "Intégrité"
+msgstr "النزاهة"
+
+msgid ""
+"La confiance comme fondement : transparence, éthique et respect de nos "
+"engagements."
+msgstr "الثقة أساس عملنا: الشفافية والأخلاق والوفاء بالتزاماتنا."
+
+msgid ""
+"La qualité dans chaque détail : des prestations fiables et des solutions "
+"adaptées à chaque client."
+msgstr "الجودة في كل التفاصيل: خدمات موثوقة وحلول تناسب كل عميل."
+
+msgid ""
+"Lancement du programme de parrainage, qui récompense les clients pour chaque"
+" nouveau voyageur recommandé."
+msgstr "إطلاق برنامج الإحالة الذي يكافئ العملاء على كل مسافر جديد يوصون به."
+
+msgid ""
+"L’agence se structure en départements pour mieux gérer chacune de ses "
+"activités."
+msgstr "تنظيم الوكالة في أقسام لإدارة كل نشاط بشكل أفضل."
+
+msgid "Nos clients témoignent"
+msgstr "شهادات عملائنا"
+
+msgid "Nos compagnies partenaires"
+msgstr "شركات الطيران الشريكة"
+
+msgid "Nos valeurs"
+msgstr "قيمنا"
+
+msgid ""
+"Notre approche repose sur une bonne connaissance du secteur, un solide "
+"réseau de partenaires et un accompagnement personnalisé, pour rendre chaque "
+"déplacement plus simple, plus fluide et mieux organisé."
+msgstr ""
+"يعتمد نهجنا على معرفة جيدة بالقطاع وشبكة شركاء قوية ومرافقة شخصية، لجعل كل "
+"رحلة أبسط وأكثر سلاسة وتنظيمًا."
+
+msgid "Notre histoire"
+msgstr "قصتنا"
+
+msgid "Notre mission"
+msgstr "مهمتنا"
+
+msgid "Notre vision"
+msgstr "رؤيتنا"
+
+msgid "Notre équipe"
+msgstr "فريقنا"
+
+msgid ""
+"Nous émettons vos billets sur les principales compagnies qui desservent "
+"Conakry et le monde."
+msgstr "نصدر تذاكرك على أبرز شركات الطيران التي تخدم كوناكري والعالم."
+
+msgid ""
+"Nouveaux services et création du département Tourisme, pour les circuits en "
+"Guinée et à l’étranger."
+msgstr "خدمات جديدة وإنشاء قسم السياحة للجولات داخل غينيا وخارجها."
+
+msgid ""
+"Nouvelle plateforme en ligne et application mobile : demandes, suivi des "
+"dossiers et actualités en temps réel."
+msgstr ""
+"منصة إلكترونية جديدة وتطبيق للجوال: الطلبات ومتابعة الملفات والأخبار في "
+"الوقت الفعلي."
+
+msgid "Organiser"
+msgstr "التنظيم"
+
+msgid "Orienter vers les solutions les plus adaptées."
+msgstr "التوجيه نحو أنسب الحلول."
+
+msgid ""
+"Pour tous les déplacements de nos équipes, Mondial Express trouve la bonne "
+"option au bon prix. Les billets arrivent toujours à temps, même quand nous "
+"nous y prenons tard."
+msgstr ""
+"في كل رحلات فرقنا، تجد Mondial Express الخيار المناسب بالسعر المناسب. تصل "
+"التذاكر دائمًا في الوقت المحدد، حتى عندما نحجز متأخرين."
+
+msgid ""
+"Programme de fidélité : des points à chaque réservation, des réductions et "
+"des avantages exclusifs."
+msgstr "برنامج الولاء: نقاط مع كل حجز وتخفيضات ومزايا حصرية."
+
+msgid ""
+"Présents à chaque étape, avec des solutions personnalisées et un suivi "
+"attentif de chaque projet."
+msgstr "حاضرون في كل مرحلة بحلول مخصصة ومتابعة دقيقة لكل مشروع."
+
+msgid "Qui nous sommes"
+msgstr "من نحن"
+
+msgid "Responsable commerciale et marketing"
+msgstr "مسؤولة المبيعات والتسويق"
+
+msgid "Responsable commerciale, IBM"
+msgstr "مسؤولة المبيعات، IBM"
+
+msgid "Responsable du service nettoyage"
+msgstr "مسؤولة خدمة التنظيف"
+
+msgid "Responsable stratégie, développement, tourisme et ressources humaines"
+msgstr "مسؤول الاستراتيجية والتطوير والسياحة والموارد البشرية"
+
+msgid ""
+"Une expertise collective : la complémentarité de notre équipe au service de "
+"votre voyage."
+msgstr "خبرة جماعية: تكامل فريقنا في خدمة رحلتك."
+
+msgid "années d’expérience"
+msgstr "سنوات من الخبرة"
+
+msgid "compagnies partenaires"
+msgstr "شركات طيران شريكة"
+
+msgid "de clients satisfaits"
+msgstr "من العملاء راضون"
+
+msgid "réservations par mois"
+msgstr "حجزًا شهريًا"
+
+msgid "Écouter"
+msgstr "الإصغاء"

@@ -111,19 +111,19 @@ if ( $forfaits->have_posts() ) :
 
 <section class="section">
 	<div class="container">
-		<header class="section__head"><div><h2><?php esc_html_e( 'Ils ont voyagé avec nous', 'mondial-express' ); ?></h2><p><?php esc_html_e( 'Témoignages d’exemple, à remplacer par les avis réels des clients.', 'mondial-express' ); ?></p></div></header>
+		<header class="section__head"><div><p class="kicker"><?php esc_html_e( 'Billetterie', 'mondial-express' ); ?></p><h2><?php esc_html_e( 'Nos compagnies partenaires', 'mondial-express' ); ?></h2><p><?php esc_html_e( 'Nous émettons vos billets sur les principales compagnies qui desservent Conakry et le monde.', 'mondial-express' ); ?></p></div><a class="link-arrow" href="<?php echo esc_url( home_url( '/a-propos/' ) ); ?>"><?php esc_html_e( 'Découvrir l’agence', 'mondial-express' ); ?> <?php echo me_icon( 'arrow' ); // phpcs:ignore ?></a></header>
+		<?php me_partners_strip(); ?>
+	</div>
+</section>
+
+<section class="section section--tight">
+	<div class="container">
+		<header class="section__head"><div><h2><?php esc_html_e( 'Nos clients témoignent', 'mondial-express' ); ?></h2></div></header>
 		<div class="grid grid--3 testimonials">
-			<?php
-			$avis = array(
-				array( 'Mon visa pour le Canada a été obtenu en trois semaines. L’équipe m’a suivie à chaque étape sur WhatsApp.', 'Fatoumata', 'Ratoma' ),
-				array( 'Billet Conakry–Istanbul trouvé au meilleur prix, et un conseiller disponible même le samedi.', 'Mamadou', 'Kaloum' ),
-				array( 'Oumra très bien organisée : hôtel proche du Haram et un guide attentif pour ma mère.', 'Aïssatou', 'Matoto' ),
-			);
-			foreach ( $avis as $a ) :
-				?>
+			<?php foreach ( me_presentation()['temoignages'] as $a ) : ?>
 				<figure class="testimonial">
-					<blockquote>« <?php echo esc_html( $a[0] ); ?> »</blockquote>
-					<figcaption><span class="avatar" aria-hidden="true"><?php echo esc_html( mb_substr( $a[1], 0, 1 ) ); ?></span><span><b><?php echo esc_html( $a[1] ); ?></b><small><?php echo esc_html( $a[2] ); ?> · <?php esc_html_e( 'exemple', 'mondial-express' ); ?></small></span></figcaption>
+					<blockquote>« <?php echo esc_html( $a[2] ); ?> »</blockquote>
+					<figcaption><span class="avatar" aria-hidden="true"><?php echo esc_html( mb_substr( $a[0], 0, 1 ) ); ?></span><span><b><?php echo esc_html( $a[0] ); ?></b><small><?php echo esc_html( $a[1] ); ?></small></span></figcaption>
 				</figure>
 			<?php endforeach; ?>
 		</div>

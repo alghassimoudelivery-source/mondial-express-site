@@ -1,0 +1,49 @@
+# Construit l'application Android (APK) à chaque modification du dossier mobile/,
+# et la publie dans la release « application-android » du dépôt (lien de téléchargement fixe).
+name: Application Android
+
+on:
+  push:
+    branches: [main]
+    paths: ["mobile/**", ".github/workflows/android.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.47.9"
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze --no-fatal-infos
+      - name: Construire l'APK
+        run: flutter build apk --release --build-number ${{ github.run_number }}
+      - name: Renommer
+        run: cp build/app/outputs/flutter-apk/app-release.apk build/Mondial-Express.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mondial-Express-apk
+          path: mobile/build/Mondial-Express.apk
+      - name: Publier dans la release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete application-android --yes --cleanup-tag 2>/dev/null || true
+          gh release create application-android build/Mondial-Express.apk \
+            --title "Application Android Mondial Express (build ${{ github.run_number }})" \
+            --notes "APK de démonstration à installer sur un téléphone Android. Construit automatiquement depuis le dossier mobile/ (commit ${{ github.sha }})." \
+            --target ${{ github.sha }}

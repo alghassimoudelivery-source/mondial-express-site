@@ -1118,3 +1118,246 @@ msgstr "Step"
 
 msgid "Action non autorisée."
 msgstr "Action not allowed."
+
+msgid "L’agence"
+msgstr "The agency"
+
+msgid "Accompagner"
+msgstr "Support"
+
+msgid "Agence de voyages et de tourisme à Conakry depuis 2015."
+msgstr "Travel and tourism agency in Conakry since 2015."
+
+msgid "Agent assistant visa"
+msgstr "Visa assistant"
+
+msgid "Assurer un suivi attentif à chaque étape."
+msgstr "Provide careful follow-up at every step."
+
+msgid "Chef comptable"
+msgstr "Chief accountant"
+
+msgid "Chef d’agence adjoint"
+msgstr "Deputy branch manager"
+
+msgid "Cheffe d’agence"
+msgstr "Branch manager"
+
+msgid "Community manager"
+msgstr "Community manager"
+
+msgid "Comprendre chaque projet et ses besoins."
+msgstr "Understand each project and its needs."
+
+msgid "Conseiller"
+msgstr "Advise"
+
+msgid "Coordonner chaque composante du voyage."
+msgstr "Coordinate every part of the trip."
+
+msgid ""
+"Création de Mondial Express en mars 2015 par M. Edouard Koundouno, "
+"entrepreneur à la tête de plusieurs sociétés, dont SOCOGIM dans le bâtiment."
+msgstr ""
+"Mondial Express is founded in March 2015 by Mr Edouard Koundouno, an "
+"entrepreneur who heads several companies, including SOCOGIM in construction."
+
+msgid ""
+"Devenir une référence du voyage et du tourisme en Afrique et dans le monde, "
+"avec des offres personnalisées, des expériences authentiques et des "
+"solutions adaptées aux nouvelles tendances."
+msgstr ""
+"To become a benchmark for travel and tourism in Africa and worldwide, with "
+"tailored offers, authentic experiences and solutions suited to new trends."
+
+msgid "Directeur général"
+msgstr "Managing director"
+
+msgid "Découvrir l’agence"
+msgstr "Discover the agency"
+
+msgid "Engagement"
+msgstr "Commitment"
+
+msgid "Entrepreneur, Conakry"
+msgstr "Entrepreneur, Conakry"
+
+msgid "Esprit d’équipe"
+msgstr "Team spirit"
+
+msgid "Excellence"
+msgstr "Excellence"
+
+msgid ""
+"Faciliter le voyage, pour tous : rendre le voyage plus accessible et plus "
+"simple, en associant expertise touristique, solutions flexibles, innovation "
+"et accompagnement personnalisé."
+msgstr ""
+"Making travel easier for everyone: more accessible and simpler travel, "
+"combining tourism expertise, flexible solutions, innovation and personal "
+"support."
+
+msgid ""
+"Fondée à Conakry en mars 2015, Mondial Express est une agence de voyages et "
+"de tourisme qui accompagne particuliers, entreprises et groupes dans leurs "
+"projets de déplacement, en Guinée comme à l’international. De la billetterie"
+" aérienne à l’assistance visa, en passant par le tourisme éducatif et "
+"médical, les voyages d’affaires, le transport et les séjours personnalisés, "
+"nous proposons des solutions pensées autour des besoins de chaque voyageur."
+msgstr ""
+"Founded in Conakry in March 2015, Mondial Express is a travel and tourism "
+"agency that supports individuals, companies and groups with their travel "
+"plans, in Guinea and abroad. From air tickets to visa assistance, "
+"educational and medical tourism, business travel, transport and tailor-made "
+"stays, we offer solutions built around each traveller’s needs."
+
+msgid ""
+"Ils ont géré mon visa et mon billet en une semaine, avec un point d’étape à "
+"chaque avancée du dossier. Je recommande les yeux fermés."
+msgstr ""
+"They handled my visa and ticket in one week, with an update at every step of"
+" the file. I recommend them without hesitation."
+
+msgid "Intégrité"
+msgstr "Integrity"
+
+msgid ""
+"La confiance comme fondement : transparence, éthique et respect de nos "
+"engagements."
+msgstr ""
+"Trust as our foundation: transparency, ethics and keeping our commitments."
+
+msgid ""
+"La qualité dans chaque détail : des prestations fiables et des solutions "
+"adaptées à chaque client."
+msgstr ""
+"Quality in every detail: reliable services and solutions suited to each "
+"client."
+
+msgid ""
+"Lancement du programme de parrainage, qui récompense les clients pour chaque"
+" nouveau voyageur recommandé."
+msgstr ""
+"Launch of the referral programme, rewarding clients for every new traveller "
+"they recommend."
+
+msgid ""
+"L’agence se structure en départements pour mieux gérer chacune de ses "
+"activités."
+msgstr ""
+"The agency is organised into departments to better manage each activity."
+
+msgid "Nos clients témoignent"
+msgstr "Our clients’ stories"
+
+msgid "Nos compagnies partenaires"
+msgstr "Our partner airlines"
+
+msgid "Nos valeurs"
+msgstr "Our values"
+
+msgid ""
+"Notre approche repose sur une bonne connaissance du secteur, un solide "
+"réseau de partenaires et un accompagnement personnalisé, pour rendre chaque "
+"déplacement plus simple, plus fluide et mieux organisé."
+msgstr ""
+"Our approach relies on solid industry knowledge, a strong partner network "
+"and personal support, to make every trip simpler, smoother and better "
+"organised."
+
+msgid "Notre histoire"
+msgstr "Our story"
+
+msgid "Notre mission"
+msgstr "Our mission"
+
+msgid "Notre vision"
+msgstr "Our vision"
+
+msgid "Notre équipe"
+msgstr "Our team"
+
+msgid ""
+"Nous émettons vos billets sur les principales compagnies qui desservent "
+"Conakry et le monde."
+msgstr ""
+"We issue your tickets on the main airlines serving Conakry and the world."
+
+msgid ""
+"Nouveaux services et création du département Tourisme, pour les circuits en "
+"Guinée et à l’étranger."
+msgstr ""
+"New services and creation of the Tourism department, for tours in Guinea and"
+" abroad."
+
+msgid ""
+"Nouvelle plateforme en ligne et application mobile : demandes, suivi des "
+"dossiers et actualités en temps réel."
+msgstr ""
+"New online platform and mobile app: requests, file tracking and real-time "
+"news."
+
+msgid "Organiser"
+msgstr "Organise"
+
+msgid "Orienter vers les solutions les plus adaptées."
+msgstr "Point you to the best-suited solutions."
+
+msgid ""
+"Pour tous les déplacements de nos équipes, Mondial Express trouve la bonne "
+"option au bon prix. Les billets arrivent toujours à temps, même quand nous "
+"nous y prenons tard."
+msgstr ""
+"For all our teams’ trips, Mondial Express finds the right option at the "
+"right price. Tickets always arrive on time, even when we book late."
+
+msgid ""
+"Programme de fidélité : des points à chaque réservation, des réductions et "
+"des avantages exclusifs."
+msgstr ""
+"Loyalty programme: points on every booking, discounts and exclusive "
+"benefits."
+
+msgid ""
+"Présents à chaque étape, avec des solutions personnalisées et un suivi "
+"attentif de chaque projet."
+msgstr ""
+"With you at every step, with tailored solutions and careful follow-up of "
+"each project."
+
+msgid "Qui nous sommes"
+msgstr "Who we are"
+
+msgid "Responsable commerciale et marketing"
+msgstr "Sales and marketing manager"
+
+msgid "Responsable commerciale, IBM"
+msgstr "Sales manager, IBM"
+
+msgid "Responsable du service nettoyage"
+msgstr "Head of cleaning services"
+
+msgid "Responsable stratégie, développement, tourisme et ressources humaines"
+msgstr "Head of strategy, development, tourism and human resources"
+
+msgid ""
+"Une expertise collective : la complémentarité de notre équipe au service de "
+"votre voyage."
+msgstr ""
+"Collective expertise: our team’s complementary skills at the service of your"
+" trip."
+
+msgid "années d’expérience"
+msgstr "years of experience"
+
+msgid "compagnies partenaires"
+msgstr "partner airlines"
+
+msgid "de clients satisfaits"
+msgstr "satisfied clients"
+
+msgid "réservations par mois"
+msgstr "bookings per month"
+
+msgid "Écouter"
+msgstr "Listen"

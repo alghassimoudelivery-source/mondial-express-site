@@ -38,6 +38,8 @@ if [ "$(wp option get me_seeded 2>/dev/null)" != "1" ]; then
 else
   wp theme activate mondial-express >/dev/null
 fi
+# Présentation de l'agence : photos de l'équipe et entrée « L’agence » du menu (idempotent).
+wp eval-file /src/repo/seed/presentation.php || echo "Présentation : à reprendre au prochain déploiement."
 wp rewrite structure '/%postname%/' >/dev/null
 wp rewrite flush --hard >/dev/null 2>&1 || wp rewrite flush
 echo SETUP_OK
