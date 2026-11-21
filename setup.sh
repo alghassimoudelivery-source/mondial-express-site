@@ -22,6 +22,15 @@ if ! wp core is-installed >/dev/null 2>&1; then
   echo "WordPress installé."
 fi
 
+# Changement d'adresse du site (ex. aperçu IP:8085 -> domaine) : remplace l'ancienne URL partout.
+OLD_URL=$(wp eval 'global $wpdb; echo $wpdb->get_var( "SELECT option_value FROM {$wpdb->options} WHERE option_name = \"home\"" );' 2>/dev/null | tr -d '\r')
+if [ -n "$OLD_URL" ] && [ "$OLD_URL" != "$ME_URL" ]; then
+  wp search-replace "$OLD_URL" "$ME_URL" --all-tables --skip-columns=guid --precise
+  wp option update home "$ME_URL" >/dev/null
+  wp option update siteurl "$ME_URL" >/dev/null
+  echo "Adresse changée : $OLD_URL -> $ME_URL"
+fi
+
 if [ "$(wp option get me_seeded 2>/dev/null)" != "1" ]; then
   wp eval-file /src/repo/seed/seed.php
   wp option update me_seeded 1

@@ -1,6 +1,6 @@
 # Mondial Express Guinée — WordPress dans Docker (ConforDev).
 # Variables attendues dans l'environnement du projet (jamais dans ce dépôt) :
-#   ME_REPO, ME_URL, ME_PORT, DB_PASSWORD, DB_ROOT_PASSWORD, WP_ADMIN_USER, WP_ADMIN_PASSWORD, WP_ADMIN_EMAIL
+#   ME_REPO, ME_URL, ME_PORT, ME_DOMAIN (domaine servi en HTTPS par Caddy), DB_PASSWORD, DB_ROOT_PASSWORD, WP_ADMIN_USER, WP_ADMIN_PASSWORD, WP_ADMIN_EMAIL
 services:
   db:
     image: mariadb:11.4
@@ -54,6 +54,7 @@ services:
         define( 'WP_HOME', getenv( 'ME_URL' ) );
         define( 'WP_SITEURL', getenv( 'ME_URL' ) );
         define( 'DISALLOW_FILE_EDIT', true );
+        if ( isset( $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 'https' === $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) { $$_SERVER['HTTPS'] = 'on'; }
       ME_URL: ${ME_URL}
     volumes:
       - wp:/var/www/html
@@ -79,7 +80,30 @@ services:
       - src:/src
     entrypoint: ["/bin/sh", "/src/repo/setup.sh"]
 
+  # Proxy HTTPS (certificat Let's Encrypt automatique) pour le domaine.
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    depends_on:
+      - wordpress
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      ME_DOMAIN: ${ME_DOMAIN}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        printf '%s {\n  encode gzip\n  reverse_proxy wordpress:80\n}\nwww.%s {\n  redir https://%s{uri} permanent\n}\n' "$$ME_DOMAIN" "$$ME_DOMAIN" "$$ME_DOMAIN" > /etc/caddy/Caddyfile
+        cat /etc/caddy/Caddyfile
+        exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
 volumes:
   db:
   wp:
   src:
+  caddy_data:
+  caddy_config:
