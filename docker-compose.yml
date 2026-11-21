@@ -28,6 +28,7 @@ services:
       - |
         set -e
         apk add --no-cache git >/dev/null
+        git config --global --add safe.directory /src/repo
         if [ -d /src/repo/.git ]; then git -C /src/repo fetch --depth 1 origin main && git -C /src/repo reset --hard origin/main;
         else git clone --depth 1 "$${ME_REPO}" /src/repo; fi
         chown -R 33:33 /src/repo
@@ -86,15 +87,16 @@ services:
     restart: unless-stopped
     depends_on:
       - wordpress
+    # Le port 80 de l'hôte est déjà occupé : HTTPS seul, certificat via le défi TLS-ALPN sur 443.
     ports:
-      - "80:80"
       - "443:443"
     environment:
       ME_DOMAIN: ${ME_DOMAIN}
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        printf '%s {\n  encode gzip\n  reverse_proxy wordpress:80\n}\nwww.%s {\n  redir https://%s{uri} permanent\n}\n' "$$ME_DOMAIN" "$$ME_DOMAIN" "$$ME_DOMAIN" > /etc/caddy/Caddyfile
+        D="$$ME_DOMAIN"
+        printf '{\n  auto_https disable_redirects\n}\n%s {\n  tls {\n    issuer acme {\n      disable_http_challenge\n    }\n  }\n  encode gzip\n  reverse_proxy wordpress:80\n}\nwww.%s {\n  tls {\n    issuer acme {\n      disable_http_challenge\n    }\n  }\n  redir https://%s{uri} permanent\n}\n' "$$D" "$$D" "$$D" > /etc/caddy/Caddyfile
         cat /etc/caddy/Caddyfile
         exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
     volumes:
