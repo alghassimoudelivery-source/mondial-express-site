@@ -138,5 +138,13 @@ foreach ( array(
 			wp_update_post( array( 'ID' => $p->ID, 'post_content' => str_replace( $old, $new, $p->post_content ) ) );
 			WP_CLI::log( 'Page application mise à jour : ' . $p->ID );
 		}
+		foreach ( array( 'en', 'es', 'ar' ) as $lg ) {
+			$k = me_tr_key( $lg, 'contenu' );
+			$c = (string) get_post_meta( $p->ID, $k, true );
+			if ( false !== strpos( $c, $old ) ) {
+				update_post_meta( $p->ID, $k, wp_slash( str_replace( $old, $new, $c ) ) );
+				WP_CLI::log( 'Traduction application mise à jour : ' . $p->ID . ' ' . $lg );
+			}
+		}
 	}
 }
