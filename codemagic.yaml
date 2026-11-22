@@ -1,0 +1,42 @@
+# Compilation iOS sans Mac avec Codemagic (https://codemagic.io), puis envoi sur TestFlight / App Store Connect.
+# Prérequis (une seule fois, par le propriétaire du compte Apple) :
+#  1. Compte Apple Developer (99 $/an) et l'app « Mondial Express » créée dans App Store Connect,
+#     identifiant de bundle : com.mondialexpressguinee.app
+#  2. Clé API App Store Connect (Utilisateurs et accès > Intégrations > Clés), ajoutée dans Codemagic
+#     (Teams > Integrations > Developer Portal) sous le nom « mondial_express_asc ».
+#  3. Dans Codemagic : ajouter ce dépôt, choisir « codemagic.yaml », dossier de l'app : mobile.
+workflows:
+  ios-app-store:
+    name: iOS App Store (Mondial Express)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    working_directory: mobile
+    integrations:
+      app_store_connect: mondial_express_asc
+    environment:
+      flutter: 3.47.9
+      xcode: latest
+      cocoapods: default
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.mondialexpressguinee.app
+    triggering:
+      events: [tag]
+      tag_patterns:
+        - pattern: "ios-*"
+    scripts:
+      - name: Dépendances
+        script: flutter pub get
+      - name: Profils de signature
+        script: xcode-project use-profiles
+      - name: Construire l'IPA
+        script: |
+          flutter build ipa --release \
+            --build-number=$((BUILD_NUMBER + 100)) \
+            --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
