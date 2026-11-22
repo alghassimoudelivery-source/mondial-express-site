@@ -139,7 +139,7 @@ foreach ( array(
 			WP_CLI::log( 'Page application mise à jour : ' . $p->ID );
 		}
 		foreach ( array( 'en', 'es', 'ar' ) as $lg ) {
-			$k = me_tr_key( $lg, 'contenu' );
+			$k = '_me_' . $lg . '_contenu';
 			$c = (string) get_post_meta( $p->ID, $k, true );
 			if ( false !== strpos( $c, $old ) ) {
 				update_post_meta( $p->ID, $k, wp_slash( str_replace( $old, $new, $c ) ) );
