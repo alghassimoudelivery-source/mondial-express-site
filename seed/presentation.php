@@ -89,3 +89,15 @@ foreach ( $pres['partenaires'] as $a ) {
 	update_option( 'me_partenaires_logos', $logos, false );
 }
 WP_CLI::log( 'Logos des compagnies : ' . count( $logos ) . ' / ' . count( $pres['partenaires'] ) );
+
+// Réseaux sociaux du client (complétés seulement s'ils sont vides dans le Personnaliseur).
+foreach ( array(
+	'facebook'  => 'https://www.facebook.com/profile.php?id=61566663756158',
+	'instagram' => 'https://www.instagram.com/mondial_express/',
+	'tiktok'    => 'https://www.tiktok.com/@mondial.express',
+) as $k => $url ) {
+	if ( '' === (string) get_theme_mod( 'me_' . $k, '' ) ) {
+		set_theme_mod( 'me_' . $k, $url );
+	}
+}
+WP_CLI::log( 'Réseaux sociaux : Facebook, Instagram, TikTok renseignés.' );
