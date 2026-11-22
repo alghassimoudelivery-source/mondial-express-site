@@ -1317,3 +1317,6 @@ msgstr "الإصغاء"
 
 msgid "Logo %s"
 msgstr "شعار %s"
+
+msgid "Espace de gestion"
+msgstr "مساحة الإدارة"

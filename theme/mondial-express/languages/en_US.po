@@ -1364,3 +1364,6 @@ msgstr "Listen"
 
 msgid "Logo %s"
 msgstr "%s logo"
+
+msgid "Espace de gestion"
+msgstr "Management area"
