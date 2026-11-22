@@ -101,3 +101,24 @@ foreach ( array(
 	}
 }
 WP_CLI::log( 'Réseaux sociaux : Facebook, Instagram, TikTok renseignés.' );
+
+// Compte de gestion (rôle Éditeur) : publie le blog et traite les demandes et dossiers, sans accès aux réglages ni aux extensions.
+// Créé une seule fois ; le mot de passe est généré ici et affiché une seule fois dans le journal du déploiement.
+if ( ! username_exists( 'gestion' ) ) {
+	$pass = wp_generate_password( 16, false );
+	$uid  = wp_insert_user(
+		array(
+			'user_login'   => 'gestion',
+			'user_pass'    => $pass,
+			'user_email'   => 'gestion@mondialexpressguinee.com',
+			'display_name' => 'Gestion Mondial Express',
+			'first_name'   => 'Gestion',
+			'role'         => 'editor',
+		)
+	);
+	if ( is_wp_error( $uid ) ) {
+		WP_CLI::warning( 'Compte gestion non créé : ' . $uid->get_error_message() );
+	} else {
+		WP_CLI::log( 'COMPTE_GESTION_CREE identifiant=gestion motdepasse=' . $pass );
+	}
+}
