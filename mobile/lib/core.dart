@@ -190,6 +190,12 @@ class AppState extends ChangeNotifier {
     await _forget();
   }
 
+  /// Supprime définitivement le compte client (données du compte effacées sur le serveur).
+  Future<void> deleteAccount() async {
+    await call('compte/supprimer', body: {});
+    await _forget();
+  }
+
   Future<void> _forget() async {
     _token = null;
     user = null;

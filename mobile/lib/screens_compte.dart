@@ -158,6 +158,14 @@ class _Profile extends StatelessWidget {
             if (context.mounted) toast(context, t('Vous êtes déconnecté.'));
           },
         ),
+        const Gap(4),
+        Center(
+          child: TextButton(
+            style: TextButton.styleFrom(foregroundColor: Colors.red.shade700),
+            onPressed: () => _confirmDelete(context),
+            child: Text(t('Supprimer mon compte')),
+          ),
+        ),
         const LangBlock(),
         const ConfordevCredit(),
       ]),
@@ -376,4 +384,26 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 },
               ),
       );
+}
+
+/// Confirmation avant la suppression définitive du compte.
+Future<void> _confirmDelete(BuildContext context) async {
+  final ok = await showDialog<bool>(
+    context: context,
+    builder: (c) => AlertDialog(
+      title: Text(t('Supprimer mon compte ?')),
+      content: Text(t('Votre compte et vos informations personnelles seront effacés définitivement. Les dossiers de voyage en cours restent gérés par l’agence.')),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(c, false), child: Text(t('Annuler'))),
+        FilledButton(style: FilledButton.styleFrom(backgroundColor: Colors.red.shade700), onPressed: () => Navigator.pop(c, true), child: Text(t('Supprimer'))),
+      ],
+    ),
+  );
+  if (ok != true || !context.mounted) return;
+  try {
+    await app.deleteAccount();
+    if (context.mounted) toast(context, t('Votre compte a été supprimé.'));
+  } catch (e) {
+    if (context.mounted) toast(context, e.toString());
+  }
 }

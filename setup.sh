@@ -40,6 +40,7 @@ else
 fi
 # Présentation de l'agence : photos de l'équipe et entrée « L’agence » du menu (idempotent).
 wp eval-file /src/repo/seed/presentation.php || echo "Présentation : à reprendre au prochain déploiement."
+wp eval-file /src/repo/seed/confidentialite.php || echo "Confidentialité : à reprendre."
 wp rewrite structure '/%postname%/' >/dev/null
 wp rewrite flush --hard >/dev/null 2>&1 || wp rewrite flush
 echo SETUP_OK

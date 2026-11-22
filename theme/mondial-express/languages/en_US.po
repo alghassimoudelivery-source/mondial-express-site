@@ -1367,3 +1367,6 @@ msgstr "%s logo"
 
 msgid "Espace de gestion"
 msgstr "Management area"
+
+msgid "Les comptes de l’équipe se suppriment depuis l’administration."
+msgstr "Team accounts are deleted from the admin area."

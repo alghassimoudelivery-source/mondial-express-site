@@ -390,6 +390,26 @@ add_action(
 			)
 		);
 
+		// Suppression du compte client depuis l'application (exigée par Google Play et l'App Store).
+		register_rest_route(
+			$ns,
+			'/compte/supprimer',
+			array(
+				'methods'             => 'POST',
+				'permission_callback' => $logged,
+				'callback'            => function () {
+					$user = wp_get_current_user();
+					if ( $user->has_cap( 'edit_posts' ) ) {
+						return new WP_Error( 'me_staff', __( 'Les comptes de l’équipe se suppriment depuis l’administration.', 'mondial-express' ), array( 'status' => 403 ) );
+					}
+					require_once ABSPATH . 'wp-admin/includes/user.php';
+					wp_logout();
+					wp_delete_user( $user->ID );
+					return array( 'ok' => true );
+				},
+			)
+		);
+
 		register_rest_route(
 			$ns,
 			'/document',

@@ -1320,3 +1320,6 @@ msgstr "شعار %s"
 
 msgid "Espace de gestion"
 msgstr "مساحة الإدارة"
+
+msgid "Les comptes de l’équipe se suppriment depuis l’administration."
+msgstr "تُحذف حسابات الفريق من لوحة الإدارة."
