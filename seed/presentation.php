@@ -122,3 +122,21 @@ if ( ! username_exists( 'gestion' ) ) {
 		WP_CLI::log( 'COMPTE_GESTION_CREE identifiant=gestion motdepasse=' . $pass );
 	}
 }
+
+// Application Android publiée sur Google Play (22/11/2026) : lien du badge et texte de la page Application (FR/EN/ES/AR).
+if ( '' === (string) get_theme_mod( 'me_app_android', '' ) ) {
+	set_theme_mod( 'me_app_android', 'https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app' );
+}
+foreach ( array(
+	'<p>L’application Mondial Express sera disponible gratuitement sur Google Play et l’App Store. Elle est reliée à votre espace client : vos demandes et dossiers sont les mêmes sur le site et dans l’application.</p>' => '<p>L’application Mondial Express est disponible gratuitement sur <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> pour les téléphones Android. Sur iPhone, utilisez la version web en attendant l’App Store. Elle est reliée à votre espace client : vos demandes et dossiers sont les mêmes sur le site et dans l’application.</p>',
+	'<p>The Mondial Express app will be available for free on Google Play and the App Store. It is linked to your customer area: your requests and files are the same on the website and in the app.</p>' => '<p>The Mondial Express app is available for free on <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> for Android phones. On iPhone, use the web version until it reaches the App Store. It is linked to your customer area: your requests and files are the same on the website and in the app.</p>',
+	'<p>La aplicación Mondial Express estará disponible gratis en Google Play y en el App Store. Está vinculada a su área de cliente: sus solicitudes y expedientes son los mismos en la web y en la aplicación.</p>' => '<p>La aplicación Mondial Express ya está disponible gratis en <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> para teléfonos Android. En iPhone, use la versión web hasta su llegada al App Store. Está vinculada a su área de cliente: sus solicitudes y expedientes son los mismos en la web y en la aplicación.</p>',
+	'<p>سيكون تطبيق Mondial Express متاحًا مجانًا على Google Play وApp Store. وهو مرتبط بمساحة العميل: طلباتك وملفاتك هي نفسها على الموقع وفي التطبيق.</p>' => '<p>تطبيق Mondial Express متاح الآن مجانًا على <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> لهواتف أندرويد. على iPhone، استخدم النسخة الويب إلى حين توفره على App Store. وهو مرتبط بمساحة العميل: طلباتك وملفاتك هي نفسها على الموقع وفي التطبيق.</p>',
+) as $old => $new ) {
+	foreach ( get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'posts_per_page' => -1, 'lang' => '' ) ) as $p ) {
+		if ( false !== strpos( $p->post_content, $old ) ) {
+			wp_update_post( array( 'ID' => $p->ID, 'post_content' => str_replace( $old, $new, $p->post_content ) ) );
+			WP_CLI::log( 'Page application mise à jour : ' . $p->ID );
+		}
+	}
+}

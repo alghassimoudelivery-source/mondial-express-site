@@ -1370,3 +1370,6 @@ msgstr "Management area"
 
 msgid "Les comptes de l’équipe se suppriment depuis l’administration."
 msgstr "Team accounts are deleted from the admin area."
+
+msgid "téléchargez-la gratuitement sur Google Play."
+msgstr "download it for free on Google Play."

@@ -66,9 +66,9 @@ return array(
 		'ar' => array( 'مساحة العميل', '', '' ),
 	),
 	'application-mobile' => array(
-		'en' => array( 'Mobile app', '', '<p>The Mondial Express app will be available for free on Google Play and the App Store. It is linked to your customer area: your requests and files are the same on the website and in the app.</p>' ),
-		'es' => array( 'Aplicación móvil', '', '<p>La aplicación Mondial Express estará disponible gratis en Google Play y en el App Store. Está vinculada a su área de cliente: sus solicitudes y expedientes son los mismos en la web y en la aplicación.</p>' ),
-		'ar' => array( 'تطبيق الهاتف', '', '<p>سيكون تطبيق Mondial Express متاحًا مجانًا على Google Play وApp Store. وهو مرتبط بمساحة العميل: طلباتك وملفاتك هي نفسها على الموقع وفي التطبيق.</p>' ),
+		'en' => array( 'Mobile app', '', '<p>The Mondial Express app is available for free on <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> for Android phones. On iPhone, use the web version until it reaches the App Store. It is linked to your customer area: your requests and files are the same on the website and in the app.</p>' ),
+		'es' => array( 'Aplicación móvil', '', '<p>La aplicación Mondial Express ya está disponible gratis en <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> para teléfonos Android. En iPhone, use la versión web hasta su llegada al App Store. Está vinculada a su área de cliente: sus solicitudes y expedientes son los mismos en la web y en la aplicación.</p>' ),
+		'ar' => array( 'تطبيق الهاتف', '', '<p>تطبيق Mondial Express متاح الآن مجانًا على <a href="https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app" target="_blank" rel="noopener">Google Play</a> لهواتف أندرويد. على iPhone، استخدم النسخة الويب إلى حين توفره على App Store. وهو مرتبط بمساحة العميل: طلباتك وملفاتك هي نفسها على الموقع وفي التطبيق.</p>' ),
 	),
 	'demande-de-devis' => array(
 		'en' => array( 'Request a quote', '', '' ),

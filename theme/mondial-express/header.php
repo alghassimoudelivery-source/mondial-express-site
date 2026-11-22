@@ -22,7 +22,7 @@
 			<span class="hide-sm"><?php echo me_icon( 'pin' ); ?> <?php esc_html_e( 'Conakry, Guinée', 'mondial-express' ); ?></span>
 			<span class="hide-sm"><?php echo me_icon( 'clock' ); ?> <?php echo esc_html( me_opt( 'horaires' ) ); ?></span>
 		</p>
-		<a class="topbar__app" href="<?php echo esc_url( home_url( '/application-mobile/' ) ); ?>"><?php esc_html_e( "Nouveau : téléchargez l'application Mondial Express", 'mondial-express' ); ?> <?php echo me_icon( 'arrow' ); ?></a>
+		<a class="topbar__app" href="<?php echo esc_url( me_opt( 'app_android' ) ? me_opt( 'app_android' ) : home_url( '/application-mobile/' ) ); ?>"<?php echo me_opt( 'app_android' ) ? ' target="_blank" rel="noopener"' : ''; ?>><?php esc_html_e( "Nouveau : téléchargez l'application Mondial Express", 'mondial-express' ); ?> <?php echo me_icon( 'arrow' ); ?></a>
 		<?php echo me_socials( 'socials socials--top' ); // phpcs:ignore ?>
 	</div>
 </div>

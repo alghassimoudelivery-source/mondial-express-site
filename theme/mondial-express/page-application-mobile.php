@@ -21,9 +21,10 @@ me_page_hero( get_the_title(), __( "Demandes, documents, suivi de dossier et off
 			<?php endforeach; ?>
 		</div>
 		<div class="app-install">
+			<?php echo me_app_badges(); // phpcs:ignore ?>
 			<a class="btn" href="<?php echo esc_url( home_url( '/app/' ) ); ?>"><?php echo me_icon( 'arrow' ); ?> <?php esc_html_e( "Ouvrir l'application", 'mondial-express' ); ?></a>
 			<div class="app-install__how">
-				<p><strong><?php esc_html_e( 'Android', 'mondial-express' ); ?></strong> · <?php esc_html_e( "ouvrez l'application puis touchez « Installer ».", 'mondial-express' ); ?></p>
+				<p><strong><?php esc_html_e( 'Android', 'mondial-express' ); ?></strong> · <?php esc_html_e( 'téléchargez-la gratuitement sur Google Play.', 'mondial-express' ); ?></p>
 				<p><strong><?php esc_html_e( 'iPhone', 'mondial-express' ); ?></strong> · <?php esc_html_e( "dans Safari, touchez Partager puis « Sur l'écran d'accueil ».", 'mondial-express' ); ?></p>
 			</div>
 		</div>

@@ -1385,3 +1385,6 @@ msgstr "Área de gestión"
 
 msgid "Les comptes de l’équipe se suppriment depuis l’administration."
 msgstr "Las cuentas del equipo se eliminan desde la administración."
+
+msgid "téléchargez-la gratuitement sur Google Play."
+msgstr "descárguela gratis en Google Play."

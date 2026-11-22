@@ -22,7 +22,7 @@ function me_defaults() {
 		'instagram'      => 'https://www.instagram.com/mondial_express/',
 		'tiktok'         => 'https://www.tiktok.com/@mondial.express',
 		'youtube'        => '',
-		'app_android'    => '',
+		'app_android'    => 'https://play.google.com/store/apps/details?id=com.mondialexpressguinee.app',
 		'app_ios'        => '',
 		'code_entete'    => '',
 		'code_pied'      => '',
@@ -193,7 +193,8 @@ function me_app_badges() {
 	$out = '<div class="stores">';
 	foreach ( $stores as $s ) {
 		$href = $s[0] ? esc_url( $s[0] ) : esc_url( home_url( '/application-mobile/' ) );
-		$out .= '<a class="store" href="' . $href . '">' . me_icon( $s[1] ) . '<span><small>' . esc_html( $s[2] ) . '</small><b>' . esc_html( $s[3] ) . '</b></span></a>';
+		$ext  = $s[0] ? ' target="_blank" rel="noopener"' : '';
+		$out .= '<a class="store" href="' . $href . '"' . $ext . '>' . me_icon( $s[1] ) . '<span><small>' . esc_html( $s[2] ) . '</small><b>' . esc_html( $s[3] ) . '</b></span></a>';
 	}
 	return $out . '</div>';
 }
